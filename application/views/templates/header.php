@@ -49,7 +49,7 @@ https://templatemo.com/tm-540-lava-landing-page
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="<?= base_url(''); ?>/index.html" class="logo">
+                        <a href="<?= base_url('main/index'); ?>" class="logo">
                             Lava
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -57,9 +57,9 @@ https://templatemo.com/tm-540-lava-landing-page
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#welcome" class="menu-item">Beranda</a></li>
                             <li class="scroll-to-section"><a href="#about" class="menu-item">Tentang</a></li>
-                            <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Testimoni</a>
-                            </li>
-                            <li class="submenu">
+                            <li class="scroll-to-section"><a href="#promotion" class="menu-item">Promosi</a></li>
+                            <li class="scroll-to-section"><a href="#testimonials" class="menu-item">Testimoni</a></li>
+                            <!-- <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
                                     <li><a href="" class="menu-item">Tentang Kami</a></li>
@@ -69,8 +69,9 @@ https://templatemo.com/tm-540-lava-landing-page
                                     <li><a href="" class="menu-item" data-toggle="modal"
                                     data-target="#admin">Admin</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li class="scroll-to-section"><a href="#contact-us" class="menu-item">Hubungi Kami</a></li>
+                            <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#admin">Admin</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
