@@ -127,9 +127,10 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="center-heading">
-                        <h2>What They Think <em>About Us</em></h2>
+                        <h2>Testimoni</h2>
                         <p>Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio.
                             Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
+                        <a href=""><i class="fas fa-plus-circle fa-15x" style="color: green;"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"

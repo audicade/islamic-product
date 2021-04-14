@@ -66,6 +66,10 @@
         </div>
     </footer>
 
+    <!-- SweetAlert 2 -->
+    <script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
     <!-- jQuery -->
     <script src="<?= base_url(''); ?>/assets/js/jquery-2.1.0.min.js"></script>
 
@@ -82,6 +86,28 @@
 
     <!-- Global Init -->
     <script src="<?= base_url(''); ?>/assets/js/custom.js"></script>
+
+
+    <script>
+        const flashData = $('.flash-data').data('flashdata');
+
+        if(flashData){
+            if(flashData == 'Password Salah!' || flashData == 'Akun Tidak Terdaftar' || flashData == 'Gagal Upload!' 
+            || flashData == 'Requirement Terlampaui!'){
+                Swal.fire({
+                    title: '',
+                    text: flashData,
+                    icon: 'warning'
+                });
+            } else{
+                Swal.fire({
+                    title: '',
+                    text: flashData,
+                    icon: 'success'
+                });
+            }; 
+        };
+    </script>
 
 </body>
 </html>

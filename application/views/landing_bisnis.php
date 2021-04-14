@@ -1,6 +1,12 @@
     <!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area" id="welcome">
-
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('bisnis');?>" nilai="0">
+        </div>
+        <?php 
+            if(isset($_SESSION['bisnis'])){
+                unset($_SESSION['bisnis']);
+            }
+        ?>
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
             <div class="container">
@@ -127,9 +133,25 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="center-heading">
-                        <h2>What They Think <em>About Us</em></h2>
+                        <h2>Testimoni</h2>
                         <p>Suspendisse vitae laoreet mauris. Fusce a nisi dapibus, euismod purus non, convallis odio.
-                            Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p>
+                            Donec vitae magna ornare, pellentesque ex vitae, aliquet urna.</p> &nbsp;
+                        
+                            <?php
+                                if($this->session->userdata('admin_id')) :
+                            ?>
+                            <div class="centre">
+                                <a href="" data-toggle="modal" data-target="#testimoni">
+                                    <i class="fa fa-plus-circle" style="color: green; font-size: 50px;"></i>
+                                </a>
+                            </div>
+                            <?php
+                                else :
+                            ?>
+                            
+                            <?php
+                                endif;
+                            ?>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"
@@ -211,3 +233,44 @@
     </section>
     <!-- ***** Testimonials Ends ***** -->
 
+    <!-- Modal Tambah Testimoni-->
+    <div class="modal fade" id="testimoni" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Testimoni</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="user" method="post" action="<?= base_url('main/tambahTesti'); ?>" enctype="multipart/form-data">
+                    <div class="form-group ">
+                        <img src="<?= base_url()?>assets/uploads/blank.png" alt="..." id="outputTestimoni" class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 400px; height: 200px;"><br>
+                        <label for="exampleFormControlFile1">Upload Foto Testimoni</label><br>    
+                        <small class="form-text text-danger">Ukuran maksimal Foto 1920x1080 pixel, Berformat JPG atau PNG, 10MB</small>
+                        <input type="file" class="form-control-file" id="UploadFoto" name="UploadFoto" accept="image/*" onchange="loadFile(event)" >
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>    
+                    <button type="submit" class="btn btn-success">Tambah Data</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+        var output = document.getElementById('outputTestimoni');
+        output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+    </script>

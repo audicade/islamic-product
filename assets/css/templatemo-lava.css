@@ -42,6 +42,10 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+.centre {
+  text-align: center;
+}
+
 .clearfix:after {
   content: ".";
   display: block;

@@ -26,15 +26,18 @@ class Login extends CI_Controller {
 				];
 				$this->session->set_userdata('admin_id', $user['admin_id']);
 				$this->session->set_userdata($data);
-
-				redirect('main','refresh');
+				
+				$this->session->set_flashdata('bisnis', 'Berhasil Login');
+				redirect('main');
 						
 			} else {
-				echo "Password salah";	
+				$this->session->set_flashdata('bisnis', 'Password Salah!');
+				redirect('main');	
 			}
 				
 		} else{
-            echo "Akun belum terdaftar";
+            $this->session->set_flashdata('bisnis', 'Akun Tidak Terdaftar!');
+			redirect('main');
 		}
 	}
 
