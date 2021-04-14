@@ -50,7 +50,7 @@ https://templatemo.com/tm-540-lava-landing-page
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="<?= base_url('main/index'); ?>" class="logo">
-                            Lava
+                            Islamic
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -71,7 +71,19 @@ https://templatemo.com/tm-540-lava-landing-page
                                 </ul>
                             </li> -->
                             <li class="scroll-to-section"><a href="#contact-us" class="menu-item">Hubungi Kami</a></li>
+                            <?php
+                                if($this->session->userdata('admin_id')) :
+                            ?>
+                            <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#logout">Logout</a></li>
+
+                            <?php
+                                else :
+                            ?>
                             <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#admin">Admin</a></li>
+                
+                            <?php
+                                endif;
+                            ?>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -95,12 +107,44 @@ https://templatemo.com/tm-540-lava-landing-page
                     </button>
                 </div>
                 <div class="modal-body">
-                </div>    
+                    <form method="post" action="<?= base_url('login'); ?>">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="emailL" name="emailL" placeholder="Email...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-user" id="passwordL" name="passwordL" placeholder="Password...">
+                        </div> 
+                    </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <button class="btn btn-primary" type="submit" >Kirim</button>
+                    <button class="btn btn-success" type="submit" >Login</button>
+                </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal Login -->
+
+    <!-- Modal Logout -->
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Apakah anda yakin akan mengakhiri sesi anda ?</p>
+                </div>    
+                <div class="modal-footer">
+                <form method="post" action="<?= base_url('login/logout'); ?>">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <button class="btn btn-success" type="submit">Yakin</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Logout -->

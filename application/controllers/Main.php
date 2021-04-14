@@ -9,4 +9,6 @@ class Main extends CI_Controller {
 		$this->load->view('landing');
 		$this->load->view('templates/footer');
 	}
+
+	
 }
