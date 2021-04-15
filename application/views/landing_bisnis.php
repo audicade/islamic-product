@@ -254,6 +254,14 @@
                     <div class="form-group ">
                         <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
                     </div>
+                    <div class="form-group">
+                        <label for="tipe_user">Tipe User</label>
+                        <select id="tipeUser" name="tipe_user" data-placeholder="Tipe User ..." require>
+                            <option value="">Tipe user</option>
+                            <option value="1">Dosen</option>
+                            <option value="2">Mahasiswa</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>    
