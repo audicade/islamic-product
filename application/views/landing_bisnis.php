@@ -245,8 +245,8 @@
                 </div>
                 <div class="modal-body">
                     <form class="user" method="post" action="<?= base_url('main/tambahTesti'); ?>" enctype="multipart/form-data">
-                    <div class="form-group ">
-                        <img src="<?= base_url()?>assets/uploads/blank.png" alt="..." id="outputTestimoni" class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 400px; height: 200px;"><br>
+                    <div class="form-group" style="text-align:center">
+                        <img src="<?= base_url()?>assets/uploads/blank.png" alt="..." id="outputTestimoni" class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 250px; "><br>
                         <label for="exampleFormControlFile1">Upload Foto Testimoni</label><br>    
                         <small class="form-text text-danger">Ukuran maksimal Foto 1920x1080 pixel, Berformat JPG atau PNG, 10MB</small>
                         <input type="file" class="form-control-file" id="UploadFoto" name="UploadFoto" accept="image/*" onchange="loadFile(event)" >
