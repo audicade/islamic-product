@@ -10,6 +10,10 @@ class BisnisModel extends CI_Model
          ];
         $this->db->insert('testimoni', $data);
     }
-
+    public function getTesti(){
+        //preparing query                            
+        $result = $this->db->get('testimoni');
+        return $result;
+    }
 
 }
