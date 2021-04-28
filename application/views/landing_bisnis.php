@@ -1,5 +1,5 @@
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome">
+    <div class="welcome-area" id="welcome"">
         <div class="flash-data" data-flashdata="<?= $this->session->flashdata('bisnis');?>" nilai="0">
         </div>
         <?php 
@@ -16,7 +16,7 @@
                         <h1>Bisnis <em>MUDAH</em> & <em>HALAL</em></h1>
                         <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
                         sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p> 
-                        <a href="#about" class="main-button-slider">Kenali Lebih Banyak</a>
+                        <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider"><strong>Mulai berbisnis!</strong></a>
                     </div>
                 </div>
             </div>
@@ -84,6 +84,9 @@
     <!-- ***** Features Big Item Start ***** -->
     <section class="section" id="promotion">
         <div class="container">
+            <div class="center-heading">
+                <h2><em>Produk</em> Kami</h2>
+            </div>
             <div class="row">
                 <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
