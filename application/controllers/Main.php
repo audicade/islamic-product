@@ -5,18 +5,20 @@ class Main extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('BisnisModel');
+		$this->load->database();
 	}
 
 	public function index()
 	{
 		$this->load->view('templates/header');
-		$this->load->view('landing_bisnis');
+		// $this->load->view('landing_bisnis');
+		$this->load_testi();
 		$this->load->view('templates/footer');
 	}
 
 	public function tambahTesti()
 	{
-		$config['upload_path']          = './assets/uploads';
+		$config['upload_path']          = '../assets/uploads';
 		$config['allowed_types']        = 'png|jpg';
 		$config['max_size']             = 10000;
 		$config['max_width'] 			= '1920';
@@ -43,6 +45,11 @@ class Main extends CI_Controller {
 		   }	
 		}
 	}
+	public function load_testi(){
+		$lib['data']= $this->BisnisModel->getTesti()->result();
+		$this->load->view('landing_bisnis',$lib);
+	}
+
 
 
 }
