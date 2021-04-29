@@ -217,7 +217,7 @@
                         ?>
                                     <div class='item service-item'>
                                         <div class='testimonial-content'>
-                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
+                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 325px; height: 480px;"></i>
                                             <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                         </div>
                                     </div>

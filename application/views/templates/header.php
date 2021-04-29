@@ -10,13 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <title>Islamic Product</title>
-<!--
-
-Lava Landing Page
-
-https://templatemo.com/tm-540-lava-landing-page
-
--->
+    
+    <!--
+    Lava Landing Page
+    https://templatemo.com/tm-540-lava-landing-page
+    -->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="<?= base_url(''); ?>/assets/css/bootstrap.min.css">
