@@ -1,5 +1,5 @@
     <!-- ***** Welcome Area Start ***** -->
-    <div class="welcome-area" id="welcome"">
+    <div class="welcome-area" id="welcome">
         <div class="flash-data" data-flashdata="<?= $this->session->flashdata('bisnis');?>" nilai="0">
         </div>
         <?php 
@@ -217,8 +217,7 @@
                         ?>
                                     <div class='item service-item'>
                                         <div class='testimonial-content'>
-                                            <h4 class="author" style="padding-bottom:16px; margin-top:16px; text-transform:uppercase"><?php echo $row->nama_pelanggan ?></h4>
-                                            <i><img src="<?= base_url(''); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
+                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
                                             <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                         </div>
                                     </div>
@@ -252,6 +251,9 @@
                     </div>
                     <div class="form-group ">
                         <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control " id="jenisP" name="jenisP" placeholder="Jenis Barang" required>
                     </div>
                 </div>
                 <div class="modal-footer">

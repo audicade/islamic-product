@@ -84,6 +84,7 @@ https://templatemo.com/tm-540-lava-landing-page
                             <?php
                                 endif;
                             ?>
+                            <li class="scroll-to-section"><a href="<?= base_url('main/produk'); ?>" class="menu-item">Produk</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>

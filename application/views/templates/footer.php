@@ -58,9 +58,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sub-footer">
-                        <p>Copyright &copy; 2020 Lava Landing Page
+                        <!-- <p>Copyright &copy; 2020 Lava Landing Page
 
-                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p> -->
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
         const flashData = $('.flash-data').data('flashdata');
 
         if(flashData){
-            if(flashData == 'Password Salah!' || flashData == 'Akun Tidak Terdaftar' || flashData == 'Gagal Upload!' 
+            if(flashData == 'Password Salah!' || flashData == 'Akun Tidak Terdaftar!' || flashData == 'Form belum lengkap!' 
             || flashData == 'Requirement Terlampaui!'){
                 Swal.fire({
                     title: '',

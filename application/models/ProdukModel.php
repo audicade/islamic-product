@@ -1,5 +1,5 @@
 <?php 
-class BisnisModel extends CI_Model
+class ProdukModel extends CI_Model
 {
 
     public function uploadTesti($namaBerkas){
@@ -7,7 +7,6 @@ class BisnisModel extends CI_Model
             
             "nama_pelanggan" => $this->input->post('namaP', true),
             "url_testimoni" => $namaBerkas,
-            "highlights" => "testy tes",
          ];
         $this->db->insert('testimoni', $data);
     }
