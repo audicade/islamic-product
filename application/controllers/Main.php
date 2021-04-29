@@ -18,7 +18,7 @@ class Main extends CI_Controller {
 
 	public function tambahTesti()
 	{
-		$config['upload_path']          = '../assets/uploads';
+		$config['upload_path']          = './assets/uploads';
 		$config['allowed_types']        = 'png|jpg';
 		$config['max_size']             = 10000;
 		$config['max_width'] 			= '1920';
