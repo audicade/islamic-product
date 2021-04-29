@@ -244,10 +244,7 @@
                         <input type="file" class="form-control-file" id="UploadFoto" name="UploadFoto" accept="image/*" onchange="loadFile(event)" >
                     </div>
                     <div class="form-group ">
-                        <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
-                    </div>
-                    <div class="form-group ">
-                        <input type="text" class="form-control " id="jenisP" name="jenisP" placeholder="Jenis Barang" required>
+                        <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Deskripsi" required>
                     </div>
                 </div>
                 <div class="modal-footer">
