@@ -5,9 +5,8 @@ class BisnisModel extends CI_Model
     public function uploadTesti($namaBerkas){
         $data = [
             
-            "nama_pelanggan" => $this->input->post('namaP', true),
             "url_testimoni" => $namaBerkas,
-            "highlights" => "testy tes",
+            "highlights" => $this->input->post('namaP', true),
          ];
         $this->db->insert('testimoni', $data);
     }

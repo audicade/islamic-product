@@ -28,10 +28,10 @@ class Main extends CI_Controller {
 	public function tambahTesti()
 	{
 		$config['upload_path']          = './assets/uploads';
-		$config['allowed_types']        = 'png|jpg';
+		$config['allowed_types']        = 'png|jpg|jpeg|osx|HEIF|HEVC|HEIC';
 		$config['max_size']             = 250000;
-		$config['max_width'] 			= '1920';
-		$config['max_height'] 			= '1080';
+		$config['max_width'] 			= '2560';
+		$config['max_height'] 			= '2048';
 		
 
 		$this->upload->initialize($config);

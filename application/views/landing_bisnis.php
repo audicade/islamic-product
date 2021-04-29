@@ -205,7 +205,7 @@
                         ?>
                                     <div class='item service-item'>
                                         <div class='testimonial-content'>
-                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
+                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 325px; height: 480px;"></i>
                                             <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                         </div>
                                     </div>
@@ -238,10 +238,7 @@
                         <input type="file" class="form-control-file" id="UploadFoto" name="UploadFoto" accept="image/*" onchange="loadFile(event)" >
                     </div>
                     <div class="form-group ">
-                        <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
-                    </div>
-                    <div class="form-group ">
-                        <input type="text" class="form-control " id="jenisP" name="jenisP" placeholder="Jenis Barang" required>
+                        <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Deskripsi" required>
                     </div>
                 </div>
                 <div class="modal-footer">
