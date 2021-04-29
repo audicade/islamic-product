@@ -18,7 +18,7 @@
                         Nama Saya Ilham dan dalam sepuluh menit kedepan saya akan menunjukkan kepada anda cara berbisnis dengan mudah dan halal, tanpa menggunakan sistem <del>Multi-level Marketing</del></p>
                         <!-- <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
                         sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p>  -->
-                        <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider"><strong>Mulai berbisnis!</strong></a>
+                        <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider">Mulai berbisnis!</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                             <img src="<?= base_url(''); ?>/assets/images/features-icon-1.png" alt="">
                             <h4>Pelatihan Usaha</h4>
                             <p>Kami akan membantu anda untuk bersama-sama berkembang dalam bisnis dan pemasaran.</p>
-                            <a href="#testimonials" class="main-button">
+                            <a href="#seminar" class="main-button">
                                 Baca Lebih Lanjut
                             </a>
                         </div>
@@ -109,7 +109,7 @@
                             <div class="text">
                                 <h4>TERUJI KLINIS</h4>
                                 <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
-                                <a rel="nofollow" href="https://templatemo.com/tm-540-lava-landing-page" target="_blank">Disini</a> untuk tahu lebih banyak</p>
+                                <a rel="nofollow" href="https://www.alodokter.com/kenyataan-mengenai-propolis" target="_blank">Disini</a> untuk tahu lebih banyak</p>
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
@@ -126,9 +126,10 @@
     </section>
     <!-- ***** Product Introduction End ***** -->
 
+    
 
     <!-- ***** Seminar Info start ***** -->
-    <section class="section" id="promotion">
+    <section class="section" id="seminar" style="margin-top:128px">
         <div class="container">
             <div class="center-heading">
                 <h2>Seputar <em>Pelatihan Usaha</em></h2>
@@ -136,55 +137,42 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>01</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-1.png" alt="">
-                            <h4>Pelatihan Usaha</h4>
-                            <p>Kami akan membantu anda untuk bersama-sama berkembang dalam bisnis dan pemasaran.</p>
-                            <a href="#testimonials" class="main-button">
-                                Baca Lebih Lanjut
-                            </a>
-                        </div>
+                    <div class="features-item" style="padding:18px 18px !important; margin-bottom: 0px !important">
+                        <i><img src="<?= base_url('/assets/uploads/Pelatihan/'); ?>Pelatihan1.jpeg" alt='Author images'></i>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                     data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>02</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-2.png" alt="">
-                            <h4>Mudah Dilakukan</h4>
-                            <p>Berbisnis dapat dilakukan dengan mudah. Dapat disesuaikan dengan kemampuan anda</p>
-                            <a href="#testimonials" class="main-button">
-                                Pahami Lebih Banyak
-                            </a>
-                        </div>
+                    <div class="features-item" style="padding:18px 18px !important; margin-bottom: 0px !important">
+                        <i><img src="<?= base_url('/assets/uploads/Pelatihan/'); ?>Pelatihan2.jpeg" alt='Author images'></i>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                     data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>03</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-3.png" alt="">
-                            <h4>Tanpa Resiko</h4>
-                            <p>Kami garansi gagal uang kembali, Barang bisa ditukar uang kembali sesuai syarat yang berlaku.</p>
-                            <a href="#testimonials" class="main-button">
-                                Simak Selanjutnya
-                            </a>
-                        </div>
+                    <div class="features-item" style="padding:18px 18px !important; margin-bottom: 0px !important">
+                        <i><img src="<?= base_url('/assets/uploads/Pelatihan/'); ?>Pelatihan3.jpeg" alt='Author images'></i>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="row" style="padding-top:16px; text-align:center !important">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item" style="padding:18px 18px !important; margin-bottom: 0px !important">
+                        <i><img src="<?= base_url('/assets/uploads/Pelatihan/'); ?>Pelatihan4.jpeg" alt='Author images'></i>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:32px" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider">Mulai berbisnis!</a>
+            </div>
+        </div>        
     </section>
     <!-- ***** Product Introduction End ***** -->
        
     <div class="right-image-decor"></div>
 
     <!-- ***** Testimonials Starts ***** -->
-    <section class="section" id="testimonials">
+    <section class="section" id="testimonials" style="margin-top:128px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
