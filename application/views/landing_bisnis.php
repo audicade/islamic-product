@@ -211,7 +211,7 @@
                                     <div class='item service-item'>
                                         <div class='testimonial-content'>
                                             <h4 class="author" style="padding-bottom:16px; margin-top:16px; text-transform:uppercase"><?php echo $row->nama_pelanggan ?></h4>
-                                            <i><img src="<?= base_url(''); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
+                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images'></i>
                                             <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                         </div>
                                     </div>

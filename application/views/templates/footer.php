@@ -93,7 +93,7 @@
         const flashData = $('.flash-data').data('flashdata');
 
         if(flashData){
-            if(flashData == 'Password Salah!' || flashData == 'Akun Tidak Terdaftar' || flashData == 'Gagal Upload!' 
+            if(flashData == 'Password Salah!' || flashData == 'Akun Tidak Terdaftar!' || flashData == 'Form belum lengkap!' 
             || flashData == 'Requirement Terlampaui!'){
                 Swal.fire({
                     title: '',

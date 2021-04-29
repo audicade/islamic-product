@@ -10,17 +10,26 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+		$lib['data']= $this->BisnisModel->getTesti()->result();
+		$this->load->view('templates/header');
+		$this->load->view('landing_bisnis',$lib);
+		// $this->load_testi();
+		$this->load->view('templates/footer');
+	}
+
+	public function produk()
+	{
 		$this->load->view('templates/header');
 		// $this->load->view('landing_bisnis');
-		$this->load_testi();
+		$this->load_produk();
 		$this->load->view('templates/footer');
 	}
 
 	public function tambahTesti()
 	{
-		$config['upload_path']          = '../assets/uploads';
+		$config['upload_path']          = './assets/uploads';
 		$config['allowed_types']        = 'png|jpg';
-		$config['max_size']             = 10000;
+		$config['max_size']             = 250000;
 		$config['max_width'] 			= '1920';
 		$config['max_height'] 			= '1080';
 		
@@ -30,11 +39,11 @@ class Main extends CI_Controller {
 		
 		//$this->upload->initialize($config);
 		if ($this->form_validation->run() == false) {
-			$this->session->set_flashdata('bisnis', 'Gagal Upload!');
+			$this->session->set_flashdata('bisnis', 'Form belum lengkap!');
 				redirect('main');	
 		} else {
 			if(!$this->upload->do_upload('UploadFoto')) {
-				$this->session->set_flashdata('bisnis', 'Requirement Terlampaui!');
+				$this->session->set_flashdata('bisnis', 'Gagal Upload!');
 				redirect('main');	
 
 		   } else {
@@ -45,11 +54,16 @@ class Main extends CI_Controller {
 		   }	
 		}
 	}
+
 	public function load_testi(){
 		$lib['data']= $this->BisnisModel->getTesti()->result();
 		$this->load->view('landing_bisnis',$lib);
 	}
 
+	public function load_produk(){
+		$lib['data']= $this->BisnisModel->getTesti()->result();
+		$this->load->view('landing_produk',$lib);
+	}
 
 
 }
