@@ -254,6 +254,9 @@
                     <div class="form-group ">
                         <input type="text" class="form-control " id="namaP" name="namaP" placeholder="Nama Pelanggan" required>
                     </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control " id="jenisP" name="jenisP" placeholder="Jenis Barang" required>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>    
