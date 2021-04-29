@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2021 at 06:16 AM
+-- Generation Time: Apr 29, 2021 at 05:31 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -78,8 +78,17 @@ CREATE TABLE `testimoni` (
   `id_testimoni` int(11) NOT NULL,
   `nama_pelanggan` varchar(255) NOT NULL,
   `url_testimoni` varchar(255) NOT NULL,
-  `jenis` varchar(11) NOT NULL
+  `highlights` varchar(255) NOT NULL DEFAULT 'Agen Sukses!!'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `testimoni`
+--
+
+INSERT INTO `testimoni` (`id_testimoni`, `nama_pelanggan`, `url_testimoni`, `highlights`) VALUES
+(1, 'Mohammad Faisal R.', '/assets/uploads/App1.jpg', 'Agen dengan ribuan pesanan perminggu!!!'),
+(2, 'Skol', '/assets/uploads/34cd035603c5d3c2b136f39134e1d1a4.jpg', '7 juta Dalam seminggu!!'),
+(3, 'Audi Pratama Putra', '/assets/uploads/34cd035603c5d3c2b136f39134e1d1a4.jpg', 'Sukses Dalam Dua Minggu!!!!');
 
 -- --------------------------------------------------------
 
@@ -155,7 +164,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `testimoni_produk`
