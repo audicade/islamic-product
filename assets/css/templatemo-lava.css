@@ -75,6 +75,8 @@ ul, li {
 
 header, nav, section, article, aside, footer, hgroup {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 * {
