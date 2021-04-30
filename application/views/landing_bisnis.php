@@ -6,6 +6,14 @@
             if(isset($_SESSION['bisnis'])){
                 unset($_SESSION['bisnis']);
             }
+
+            //preparing whatsapp message generator
+            $pesan = "Test%20auto%20chat%20web%20Islamic";
+            foreach ($agen['agen'] as $row){
+                $telp = $row->no_telp;
+            }
+            $whatsapp = "http://api.whatsapp.com/send?";
+            $api = $whatsapp."phone=".$telp."&text=".$pesan;
         ?>
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
@@ -18,7 +26,7 @@
                         Nama Saya Ilham dan dalam sepuluh menit kedepan saya akan menunjukkan kepada anda cara berbisnis dengan mudah dan halal, tanpa menggunakan sistem <del>Multi-level Marketing</del></p>
                         <!-- <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
                         sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p>  -->
-                        <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider">Mulai berbisnis!</a>
+                        <a href=<?php echo $api ?> target="_blank" class="main-button-slider">Mulai berbisnis!</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +113,7 @@
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
-                            <img src="<?= base_url(''); ?>/assets/images/about-icon-02.png" alt="">
+                            <img style="margin-left:8px" width=85px height=85px src="<?= base_url(''); ?>/assets/images/benefit-icon-02.png" alt="">
                             <div class="text">
                                 <h4>TERUJI KLINIS</h4>
                                 <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
@@ -113,7 +121,7 @@
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
-                            <img src="<?= base_url(''); ?>/assets/images/about-icon-03.png" alt="">
+                            <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/benefit-icon-03.png" alt="">
                             <div class="text">
                                 <h4>PELUANG PASAR YANG LUAS</h4>
                                 <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
@@ -133,7 +141,6 @@
         <div class="container">
             <div class="center-heading">
                 <h2>Seputar <em>Pelatihan Usaha</em></h2>
-                <h2><?php echo($nama) ?></h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
@@ -163,10 +170,10 @@
                     </div>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:32px" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                <a href="http://api.whatsapp.com/send?phone=6281230425724&text=Test%20auto%20chat%20web%20Islamic" target="_blank" class="main-button-slider">Mulai berbisnis!</a>
-            </div>
-        </div>        
+        </div>    
+        <div style="text-align:center; margin-top:64px">
+                <a href=<?php echo $api ?> target="_blank" class="main-button">Mulai berbisnis!</a>
+        </div>    
     </section>
     <!-- ***** Product Introduction End ***** -->
        

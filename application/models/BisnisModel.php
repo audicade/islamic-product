@@ -15,8 +15,8 @@ class BisnisModel extends CI_Model
         $result = $this->db->get('testimoni');
         return $result;
     }
-    public function getAgen(){
-        $result = $this->db->get('agen');
+    public function getAgen($nama){
+        $result = $this->db->query("SELECT no_telp FROM agen WHERE nama_agen='". $nama ."'");
         return $result;
     }
     

@@ -62,18 +62,18 @@ class Main extends CI_Controller {
 	public function load_getURL(){
 		$name = $this->input->get('agen');
 		if ($name == NULL){
-			$name = "Ilham";
+			$name = "Ilham Darussalam";
 		}
 		return $name;
 	}
-	public function load_agen(){
-		$agen = $this->BisnisModel->getAgen()->result();
+	public function load_agen($nama){
+		$agen['agen'] = $this->BisnisModel->getAgen($nama)->result();
 		return $agen;
 	}
 	public function load_bisnis(){
 		$name = $this->load_getURL();
 		$data = $this->load_testi();
-		$agen = $this->load_agen();
+		$agen = $this->load_agen($name);
 		$lib['nama'] = $name;
 		$lib['testi'] = $data;
 		$lib['agen'] = $agen;
