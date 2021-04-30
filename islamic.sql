@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 29, 2021 at 08:35 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Host: localhost
+-- Generation Time: Apr 30, 2021 at 05:54 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,13 +85,13 @@ CREATE TABLE `testimoni` (
 --
 
 INSERT INTO `testimoni` (`id_testimoni`, `url_testimoni`, `highlights`) VALUES
-(5, 'Testi1.jpeg', 'Testi 1'),
-(6, 'Testi2.jpeg', 'Testi 2'),
-(7, 'Testi3.jpeg', 'Testi 3'),
-(8, 'Testi4.jpeg', 'Testi 4'),
-(9, 'Testi5.jpeg', 'Testi 5'),
-(10, 'Testi6.jpeg', 'Testi 6'),
-(11, 'Testi7.jpeg', 'Testi 7');
+(5, 'Testi1.jpeg', 'Barang Datang Langsung Laku!!!!'),
+(6, 'Testi2.jpeg', 'Hasil Mentoring Rejeki Lancar!!!'),
+(7, 'Testi3.jpeg', 'Setelah Upload Langsung Laku!!'),
+(8, 'Testi4.jpeg', 'Barang mudah laku!!'),
+(9, 'Testi5.jpeg', 'Agen Suksesss!!'),
+(10, 'Testi6.jpeg', 'Banyak yang tertarik!!'),
+(11, 'Testi7.jpeg', 'Barang Laris Maniss!!');
 
 -- --------------------------------------------------------
 
