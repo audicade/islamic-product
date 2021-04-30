@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2021 at 05:54 PM
+-- Generation Time: Apr 30, 2021 at 06:51 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -40,6 +40,28 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `username`, `password`, `email`) VALUES
 (1, 'admin', 'admin', 'juukyokai00@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agen`
+--
+
+CREATE TABLE `agen` (
+  `id_agen` int(11) NOT NULL,
+  `kode` int(11) NOT NULL,
+  `nama_agen` varchar(255) NOT NULL,
+  `no_telp` bigint(20) NOT NULL,
+  `domisili` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `agen`
+--
+
+INSERT INTO `agen` (`id_agen`, `kode`, `nama_agen`, `no_telp`, `domisili`) VALUES
+(1, 123, 'Faisal', 6282217401318, 'Surabaya'),
+(2, 1, 'Ilham Darussalam', 6282217401318, 'Surabaya');
 
 -- --------------------------------------------------------
 
@@ -117,6 +139,13 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
+-- Indexes for table `agen`
+--
+ALTER TABLE `agen`
+  ADD PRIMARY KEY (`id_agen`),
+  ADD UNIQUE KEY `kode` (`kode`);
+
+--
 -- Indexes for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
@@ -150,6 +179,12 @@ ALTER TABLE `testimoni_produk`
 --
 ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `agen`
+--
+ALTER TABLE `agen`
+  MODIFY `id_agen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `perusahaan`
