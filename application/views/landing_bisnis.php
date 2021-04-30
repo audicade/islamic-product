@@ -133,6 +133,7 @@
         <div class="container">
             <div class="center-heading">
                 <h2>Seputar <em>Pelatihan Usaha</em></h2>
+                <h2><?php echo($nama) ?></h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
@@ -201,14 +202,14 @@
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="owl-carousel owl-theme">
                         <?php
-                            foreach ($data as $row){
+                            foreach ($testi['data'] as $row){
                         ?>
-                                    <div class='item service-item'>
-                                        <div class='testimonial-content'>
-                                            <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 325px; height: 480px;"></i>
-                                            <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
-                                        </div>
+                                <div class='item service-item'>
+                                    <div class='testimonial-content'>
+                                        <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 325px; height: 100%;"></i>
+                                        <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                     </div>
+                                </div>
                         <?php
                             }
                         ?>

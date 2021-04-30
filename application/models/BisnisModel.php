@@ -15,5 +15,10 @@ class BisnisModel extends CI_Model
         $result = $this->db->get('testimoni');
         return $result;
     }
+    public function getAgen(){
+        $result = $this->db->get('agen');
+        return $result;
+    }
+    
 
 }

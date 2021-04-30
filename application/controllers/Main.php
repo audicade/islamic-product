@@ -10,10 +10,10 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$lib['data']= $this->BisnisModel->getTesti()->result();
+		// $lib['data']= $this->BisnisModel->getTesti()->result();
 		$this->load->view('templates/header');
-		$this->load->view('landing_bisnis',$lib);
-		// $this->load_testi();
+		// $this->load->view('landing_bisnis',$lib);
+		$this->load_bisnis();
 		$this->load->view('templates/footer');
 	}
 
@@ -57,6 +57,26 @@ class Main extends CI_Controller {
 
 	public function load_testi(){
 		$lib['data']= $this->BisnisModel->getTesti()->result();
+		return $lib;
+	}
+	public function load_getURL(){
+		$name = $this->input->get('agen');
+		if ($name == NULL){
+			$name = "Ilham";
+		}
+		return $name;
+	}
+	public function load_agen(){
+		$agen = $this->BisnisModel->getAgen()->result();
+		return $agen;
+	}
+	public function load_bisnis(){
+		$name = $this->load_getURL();
+		$data = $this->load_testi();
+		$agen = $this->load_agen();
+		$lib['nama'] = $name;
+		$lib['testi'] = $data;
+		$lib['agen'] = $agen;
 		$this->load->view('landing_bisnis',$lib);
 	}
 
