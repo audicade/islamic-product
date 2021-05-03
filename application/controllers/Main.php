@@ -120,7 +120,6 @@ class Main extends CI_Controller {
 
 	public function tambahAgent()
 	{
-		
 		$this->form_validation->set_rules('kodeB', 'Kode Agent', 'trim|required');
 		$this->form_validation->set_rules('namaB', 'Nama Agent', 'trim|required');
 		$this->form_validation->set_rules('noTelpB', 'No Telp Agent', 'trim|required');
@@ -240,11 +239,11 @@ class Main extends CI_Controller {
 		return $api;
 	}
 	public function load_pesan_bisnis(){
-		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		$pesan = "Halo%20Kak%20".$this->load_getURL().".%20Tolong%20bantu%20saya%20meraih%20sukses!!";
 		return $pesan;
 	}
 	public function load_pesan_produk(){
-		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		$pesan = "Halo%20Kak%20".$this->load_getURL().",%20Saya%20ingin%20memsan%20produk%20ajaib%20British%20Propolis";
 		return $pesan;
 	}
 	public function load_bisnis(){

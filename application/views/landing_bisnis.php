@@ -175,7 +175,7 @@
     <div class="right-image-decor"></div>
 
     <!-- ***** Testimonials Starts ***** -->
-    <section class="section" id="testimonials" style="margin-top:128px; margin-left:-48px !important">
+    <section class="section" id="testimonials" style="margin-top:128px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-12 col-sm-12 mobile-bottom-fix-big"
-                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s" >
                     <div class="owl-carousel owl-theme">
                         <?php
                             foreach ($testi['data'] as $row){

@@ -44,13 +44,13 @@
                             <div style="text-align:center; margin-top:64px;">
                                     <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
                             </div>    
-                        <ul class="social">
+                        <!-- <ul class="social">
                             <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-rss"></i></a></li>
                             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
