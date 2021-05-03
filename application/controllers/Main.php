@@ -99,9 +99,12 @@ class Main extends CI_Controller {
 	echo json_encode($this->BisnisModel->getAgentById($_POST['id']));
    }
 
-   public function ubahUrl()
+   public function ubahUrl($nama)
    {
-	   
+		
+    	$urlNama =str_replace(' ', '%20', $nama);
+		$url ="http://localhost/islamic-product/main?agen=".$urlNama;
+    	echo $url;
    }
 
 	public function hapusAgent($id)
