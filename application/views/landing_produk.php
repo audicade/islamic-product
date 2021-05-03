@@ -9,7 +9,7 @@
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <h1 style="font-size:49px">Produk <em>Halal</em> Dan <em>Bermanfaat</em></h1>
                         <p style="text-align: justify"><b style="font-size:28px"> British Propolis </b>adalah produk <b style="font-size:22px">herbal</b> yang memiliki beragam manfaat. 
-                           <b style="font-size:28px"> British Propolis </b> yang merupakan salah satu produk hasil dari lebah, sehingga aman dan halal untuk dikonsumsi.</b>.</p> 
+                           <b style="font-size:28px"> British Propolis </b> yang merupakan salah satu produk hasil dari lebah sang serangga ajaib, sehingga aman dan halal untuk dikonsumsi.</b>.</p> 
                         <a href=<?php echo $api?> class="main-button-slider">Pesan Sekarang</a>
                     </div>
                 </div>
