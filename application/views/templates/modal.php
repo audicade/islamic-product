@@ -77,6 +77,7 @@
                         </thead>
                         <tbody>
                         <?php
+                        // $no = $this->uri->segment('3') + 1;
                             foreach ($agent as $gen){
                         ?> 
                             <tr>
@@ -86,6 +87,8 @@
                             <td><?= $gen['no_telp']; ?></td>
                             <td><?= $gen['domisili']; ?></td>
                             <td>
+                                <button href=""  class="btn btn-warning ml-1 ModalGetUrl" data-toggle="modal"
+                                    data-target="#getURL" data-id="<?= $gen['id_agen']; ?>"><i class="fas fa-pen" data-dismiss="modal"></i>URL</button>
                                 <button href=""  class="btn btn-warning ml-1 ModalUbahAgen" data-toggle="modal"
                                     data-target="#formUbahAgen" data-id="<?= $gen['id_agen']; ?>"><i class="fas fa-pen" data-dismiss="modal"></i>Edit</button>
                                 <a href="<?=base_url(); ?>main/hapusAgent/<?= $gen['id_agen']; ?>"  class="btn btn-danger ml-1 " onclick="return confirm('Apakah anda yakin ingin menghapus data agen ini?');"></i>Hapus</button>
@@ -93,13 +96,13 @@
                             </tr>
                         <?php
                             }
+                            // $this->pagination->create_links(); 
                         ?>
                         </tbody>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <button class="btn btn-success" type="submit" >Login</button>
+                    
                 </div>
             </div>
         </div>
@@ -171,6 +174,33 @@
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Kembali</button>
                     <button class="btn btn-success" type="submit" >Tambah</button>
                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Tambah Agen -->
+
+    <!-- Modal Tambah Agen -->
+    <div class="modal fade" id="getURL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">URL Agen</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" id="NamaURL" name="NamaURL" style="background-color: #ffff;" readonly>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" id="URL" name="URL" style="background-color: #ffff;" readonly>
+                    </div>
+                    <button class="btn btn-success getTrueUrl" type="button" >Mendapatkan URL</button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary resetUrl" type="button" data-dismiss="modal">Kembali</button>
                 </div>
             </div>
         </div>

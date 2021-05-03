@@ -6,14 +6,52 @@ class Main extends CI_Controller {
 		parent::__construct();
 		$this->load->model('BisnisModel');
 		$this->load->database();
+		// $this->load->library('pagination');
 	}
 
 	public function index()
 	{
-		$user['agent']= $this->BisnisModel->getAgent();
+		// Pagination
+		// $config['base_url'] = base_url().'main/';
+		// $config['total_rows'] = $this->BisnisModel->getCountAgent();
+		// $config['per_page'] = 5;
+
+		// $config['full_tag_open'] = '<nav><ul class="pagination">';
+		// $config['full_tag_close'] = ' </ul></nav>';
+
+		// $config['first_link'] = 'First';
+		// $config['first_tag_open'] = '<li class="page-item">';
+		// $config['first_tag_close'] = '</li>';
+
+		// $config['last_link'] = 'Last';
+		// $config['last_tag_open'] = '<li class="page-item">';
+		// $config['last_tag_close'] = '</li>';
+
+		// $config['next_link'] = '&raquo';
+		// $config['next_tag_open'] = '<li class="page-item">';
+		// $config['next_tag_close'] = '</li>';
+
+		// $config['prev_link'] = '&laquo';
+		// $config['prev_tag_open'] = '<li class="page-item">';
+		// $config['prev_tag_close'] = '</li>';
+
+		// $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+		// $config['cur_tag_close'] = '</a></li>';
+
+		// $config['num_tag_open'] = '<li class="page-item">';
+		// $config['num_tag_close'] = '</li>';
+
+		// $config['attributes'] = array('class' => 'page-link');
+		
+		// $this->pagination->initialize($config);
+		
+		// $data['start'] = $this->uri->segment(3);
+		// Pagination
+
+		$data['agent']= $this->BisnisModel->getAgent();
 		// $lib['data']= $this->BisnisModel->getTesti()->result();
 		$this->load->view('templates/header');
-		$this->load->view('templates/modal', $user);
+		$this->load->view('templates/modal', $data);
 		// $this->load->view('landing_bisnis',$lib);
 		$this->load_bisnis();
 		$this->load->view('templates/footer');
@@ -21,7 +59,10 @@ class Main extends CI_Controller {
 
 	public function produk()
 	{
+		$data['agent']= $this->BisnisModel->getAgent();
+
 		$this->load->view('templates/header');
+		$this->load->view('templates/modal', $data);
 		// $this->load->view('landing_bisnis');
 		$this->load_produk();
 		$this->load->view('templates/footer');
@@ -60,10 +101,10 @@ class Main extends CI_Controller {
 	public function tambahAgent()
 	{
 		
-		$this->form_validation->set_rules('kodeB', 'Kode Agent', 'trim|required|alpha_numeric');
-		$this->form_validation->set_rules('namaB', 'Nama Agent', 'trim|required|alpha');
-		$this->form_validation->set_rules('noTelpB', 'No Telp Agent', 'trim|required|integer');
-		$this->form_validation->set_rules('domisiliB', 'Domisili', 'trim|required|alpha');
+		$this->form_validation->set_rules('kodeB', 'Kode Agent', 'trim|required');
+		$this->form_validation->set_rules('namaB', 'Nama Agent', 'trim|required');
+		$this->form_validation->set_rules('noTelpB', 'No Telp Agent', 'trim|required');
+		$this->form_validation->set_rules('domisiliB', 'Domisili', 'trim|required');
 		
 		if ($this->form_validation->run() == false) {
 			$this->session->set_flashdata('bisnis', 'Gagal Ditambahkan Pastikan Data Terisi Dengan Benar');
@@ -78,10 +119,10 @@ class Main extends CI_Controller {
 	public function ubahAgent()
 	{
 
-		$this->form_validation->set_rules('kodeA', 'Kode Agent', 'trim|required|alpha_numeric');
-		$this->form_validation->set_rules('namaA', 'Nama Agent', 'trim|required|alpha');
-		$this->form_validation->set_rules('noTelpA', 'No Telp Agent', 'trim|required|integer');
-		$this->form_validation->set_rules('domisiliA', 'Domisili', 'trim|required|alpha');
+		$this->form_validation->set_rules('kodeA', 'Kode Agent', 'trim|required');
+		$this->form_validation->set_rules('namaA', 'Nama Agent', 'trim|required');
+		$this->form_validation->set_rules('noTelpA', 'No Telp Agent', 'trim|required');
+		$this->form_validation->set_rules('domisiliA', 'Domisili', 'trim|required');
 	
 		if ($this->form_validation->run() == false) {
 			$this->session->set_flashdata('bisnis', 'Gagal Dirubah Pastikan Data Terisi Dengan Benar');
@@ -97,14 +138,6 @@ class Main extends CI_Controller {
 	public function getInfoAgent()
    {
 	echo json_encode($this->BisnisModel->getAgentById($_POST['id']));
-   }
-
-   public function ubahUrl($nama)
-   {
-		
-    	$urlNama =str_replace(' ', '%20', $nama);
-		$url ="http://localhost/islamic-product/main?agen=".$urlNama;
-    	echo $url;
    }
 
 	public function hapusAgent($id)
