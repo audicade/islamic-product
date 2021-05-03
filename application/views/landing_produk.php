@@ -30,21 +30,23 @@
                 <ul style="list-style: circle !important">
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" style="padding:16px">
                         <div class="text">
-                            <h4>Memiliki Beragam Nutrisi</h4>
-                            <p>Ragam nutrisi yang terkandung British propolis antara lain lulus LPPOM Majelis Ulama Indonesia</a></p>
+                            <h4>Mengandung Ragam Mineral</h4>
+                            <p>British Propolis mengandung beragam nutrisi yang sangat bermanfaat bagi tubuh. 
+                                Ragam nutrisi yang terkandung antara lain adalah karbohidrat, protein, magnesium, kalium zat besi kandungan nutrisi tersebut sangatlah bagus untuk memenuhi kebutuhan mineral dalam tubuh.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s" style="padding:16px">
                         <div class="text">
-                            <h4>TERUJI KLINIS</h4>
-                            <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
-                            <a rel="nofollow" href="https://www.alodokter.com/kenyataan-mengenai-propolis" target="_blank">Disini</a> untuk tahu lebih banyak</p>
+                            <h4>Mengandung Vitamin</h4>
+                            <p>Selain Mineral yang berguna bagi tubuh, British Propolis juga mengandung beragam vitamin. 
+                                Ragam vitamin yang terkandung antara lain adalah vitamin B yang baik untuk kesehatan syaraf, Vitamin C yang berfungsi untuk meningkatkan imun tubuh, dan Vitamin E yang baik untuk kesehatan kulit.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
                             <h4>PELUANG PASAR YANG LUAS</h4>
-                            <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
+                            <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. 
+                                Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
                         </div>
                     </li>
                 </ul>
