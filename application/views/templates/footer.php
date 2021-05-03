@@ -86,6 +86,7 @@
 
     <!-- Global Init -->
     <script src="<?= base_url(''); ?>/assets/js/custom.js"></script>
+    <script src="<?= base_url(''); ?>/assets/js/script.js"></script>
 
 
     <script>
