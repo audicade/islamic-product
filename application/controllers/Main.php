@@ -10,8 +10,10 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
+		$user['agent']= $this->BisnisModel->getAgent();
 		// $lib['data']= $this->BisnisModel->getTesti()->result();
 		$this->load->view('templates/header');
+		$this->load->view('templates/modal', $user);
 		// $this->load->view('landing_bisnis',$lib);
 		$this->load_bisnis();
 		$this->load->view('templates/footer');
@@ -28,7 +30,7 @@ class Main extends CI_Controller {
 	public function tambahTesti()
 	{
 		$config['upload_path']          = './assets/uploads';
-		$config['allowed_types']        = 'png|jpg|jpeg|osx|HEIF|HEVC|HEIC';
+		$config['allowed_types']        = 'png|jpg|jpeg|bmp|jpe|jpg2|svg|ico';
 		$config['max_size']             = 250000;
 		$config['max_width'] 			= '2560';
 		$config['max_height'] 			= '2048';
@@ -55,8 +57,63 @@ class Main extends CI_Controller {
 		}
 	}
 
+	public function tambahAgent()
+	{
+		
+		$this->form_validation->set_rules('kodeB', 'Kode Agent', 'trim|required|alpha_numeric');
+		$this->form_validation->set_rules('namaB', 'Nama Agent', 'trim|required|alpha');
+		$this->form_validation->set_rules('noTelpB', 'No Telp Agent', 'trim|required|integer');
+		$this->form_validation->set_rules('domisiliB', 'Domisili', 'trim|required|alpha');
+		
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('bisnis', 'Gagal Ditambahkan Pastikan Data Terisi Dengan Benar');
+			redirect('main');	
+		} else {
+			$this->BisnisModel->insertAgent();
+			$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+			redirect('main');
+		}
+	}
+
+	public function ubahAgent()
+	{
+
+		$this->form_validation->set_rules('kodeA', 'Kode Agent', 'trim|required|alpha_numeric');
+		$this->form_validation->set_rules('namaA', 'Nama Agent', 'trim|required|alpha');
+		$this->form_validation->set_rules('noTelpA', 'No Telp Agent', 'trim|required|integer');
+		$this->form_validation->set_rules('domisiliA', 'Domisili', 'trim|required|alpha');
+	
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('bisnis', 'Gagal Dirubah Pastikan Data Terisi Dengan Benar');
+			redirect('main');	
+		} else {
+			$this->BisnisModel->updateAgent();
+			$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+			redirect('main');
+					
+		}
+	}
+
+	public function getInfoAgent()
+   {
+	echo json_encode($this->BisnisModel->getAgentById($_POST['id']));
+   }
+
+   public function ubahUrl()
+   {
+	   
+   }
+
+	public function hapusAgent($id)
+    {
+		$this->BisnisModel->hapusDataAgent($id);
+		$this->session->set_flashdata('bisnis', 'Berhasil Dihapus');
+		redirect('main');
+    }
+
 	public function load_testi(){
 		$lib['data']= $this->BisnisModel->getTesti()->result();
+		
 		return $lib;
 	}
 	public function load_getURL(){

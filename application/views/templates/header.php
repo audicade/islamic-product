@@ -73,6 +73,7 @@
                                 if($this->session->userdata('admin_id')) :
                             ?>
                             <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#logout">Logout</a></li>
+                            <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#agen">Agen</a></li>
 
                             <?php
                                 else :
@@ -82,7 +83,7 @@
                             <?php
                                 endif;
                             ?>
-                            <li class="scroll-to-section"><a href="<?= base_url('main/produk'); ?>" class="menu-item">Produk</a></li>
+
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -95,55 +96,4 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <!-- Modal Login -->
-    <div class="modal fade" id="admin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Admin Login</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="<?= base_url('login'); ?>">
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-user" id="emailL" name="emailL" placeholder="Email...">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control form-control-user" id="passwordL" name="passwordL" placeholder="Password...">
-                        </div> 
-                    </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <button class="btn btn-success" type="submit" >Login</button>
-                </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Login -->
-
-    <!-- Modal Logout -->
-    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Apakah anda yakin akan mengakhiri sesi anda ?</p>
-                </div>    
-                <div class="modal-footer">
-                <form method="post" action="<?= base_url('login/logout'); ?>">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <button class="btn btn-success" type="submit">Yakin</button>
-                </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Logout -->
+    
