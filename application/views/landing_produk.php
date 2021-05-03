@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
                         data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>Bisnis <em>MUDAH</em> & <em>HALAL</em></h1>
+                        <h1><em>British Propolis</em></h1>
                         <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
                         sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p> 
                         <a href="#about" class="main-button-slider">KNOW US BETTER</a>

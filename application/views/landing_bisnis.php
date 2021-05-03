@@ -180,7 +180,7 @@
     <div class="right-image-decor"></div>
 
     <!-- ***** Testimonials Starts ***** -->
-    <section class="section" id="testimonials" style="margin-top:128px">
+    <section class="section" id="testimonials" style="margin-top:128px; margin-left:-48px !important">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -213,7 +213,7 @@
                         ?>
                                 <div class='item service-item'>
                                     <div class='testimonial-content'>
-                                        <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 325px; height: 100%;"></i>
+                                        <i><img src="<?= base_url('/assets/uploads/'); ?><?php echo($row->url_testimoni)?>" alt='Author images' style="width: 100%"></i>
                                         <p style="text-align;justify"><strong><?php echo($row->highlights)?>.</strong></p>
                                     </div>
                                 </div>
