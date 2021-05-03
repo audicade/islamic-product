@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 30, 2021 at 06:51 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Host: 127.0.0.1
+-- Generation Time: May 03, 2021 at 11:19 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -49,7 +49,7 @@ INSERT INTO `admin` (`admin_id`, `username`, `password`, `email`) VALUES
 
 CREATE TABLE `agen` (
   `id_agen` int(11) NOT NULL,
-  `kode` int(11) NOT NULL,
+  `kode` varchar(5) NOT NULL,
   `nama_agen` varchar(255) NOT NULL,
   `no_telp` bigint(20) NOT NULL,
   `domisili` varchar(255) NOT NULL
@@ -60,8 +60,13 @@ CREATE TABLE `agen` (
 --
 
 INSERT INTO `agen` (`id_agen`, `kode`, `nama_agen`, `no_telp`, `domisili`) VALUES
-(1, 123, 'Faisal', 6282217401318, 'Surabaya'),
-(2, 1, 'Ilham Darussalam', 6282217401318, 'Surabaya');
+(1, 'A0001', 'Faisal', 6282217401318, 'Surabaya'),
+(2, 'A0002', 'Ilham Darussalam', 6282217401318, 'Surabaya'),
+(4, 'A0003', 'Audi', 6281230425724, 'Surabaya'),
+(5, 'B0004', 'Audi pratama putra', 6281230425724, 'Surabaya'),
+(6, 'B0001', 'haha hihi huhu hehe hoho', 6281230425724, 'Surabaya'),
+(7, 'B0002', 'Aurelia Amanda Syifa', 6281230425724, 'Surabaya'),
+(8, 'B0003', 'Tres Bien', 6281230425724, 'Surabaya');
 
 -- --------------------------------------------------------
 
@@ -184,7 +189,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `agen`
 --
 ALTER TABLE `agen`
-  MODIFY `id_agen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_agen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `perusahaan`
