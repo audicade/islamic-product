@@ -171,8 +171,8 @@
                 </div>
             </div>
         </div>    
-        <div style="text-align:center; margin-top:64px">
-                <a href=<?php echo $api ?> target="_blank" class="main-button">Mulai berbisnis!</a>
+        <div style="text-align:center; margin-top:64px;">
+                <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
         </div>    
     </section>
     <!-- ***** Product Introduction End ***** -->
