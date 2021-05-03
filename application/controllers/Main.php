@@ -48,7 +48,8 @@ class Main extends CI_Controller {
 		// $data['start'] = $this->uri->segment(3);
 		// Pagination
 
-		$data['agent']= $this->BisnisModel->getAgent();
+		$type = "A";
+		$data['agent']= $this->BisnisModel->getAgent($type);
 		// $lib['data']= $this->BisnisModel->getTesti()->result();
 		$this->load->view('templates/header');
 		$this->load->view('templates/modal', $data);
@@ -59,7 +60,8 @@ class Main extends CI_Controller {
 
 	public function produk()
 	{
-		$data['agent']= $this->BisnisModel->getAgent();
+		$type = "B";
+		$data['agent']= $this->BisnisModel->getAgent($type);
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/modal', $data);
@@ -80,20 +82,38 @@ class Main extends CI_Controller {
 		$this->upload->initialize($config);
 		$this->form_validation->set_rules('namaP', 'Nama Pelanggan', 'trim|required');
 		
-		//$this->upload->initialize($config);
+		$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
+
 		if ($this->form_validation->run() == false) {
-			$this->session->set_flashdata('bisnis', 'Form belum lengkap!');
+			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$this->session->set_flashdata('bisnis', 'Form belum lengkap!');
 				redirect('main');	
+			} else {
+				$this->session->set_flashdata('bisnis', 'Form belum lengkap!');
+				redirect('main/produk');
+			}
 		} else {
 			if(!$this->upload->do_upload('UploadFoto')) {
-				$this->session->set_flashdata('bisnis', 'Gagal Upload!');
-				redirect('main');	
-
+				if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+					$this->session->set_flashdata('bisnis', 'Gagal Upload!');
+					redirect('main');
+				} else {
+					$this->session->set_flashdata('bisnis', 'Gagal Upload!');
+					redirect('main/produk');
+				}
 		   } else {
-			   $namaBerkas = $this->upload->data("file_name");
+			   if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$namaBerkas = $this->upload->data("file_name");
 			   $this->BisnisModel->uploadTesti($namaBerkas);
 			   $this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
 				redirect('main');
+			} else {
+				$namaBerkas = $this->upload->data("file_name");
+			   $this->BisnisModel->uploadTestiP($namaBerkas);
+			   $this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+				redirect('main/produk');
+			}
+			   
 		   }	
 		}
 	}
@@ -104,14 +124,29 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('namaB', 'Nama Agent', 'trim|required');
 		$this->form_validation->set_rules('noTelpB', 'No Telp Agent', 'trim|required');
 		$this->form_validation->set_rules('domisiliB', 'Domisili', 'trim|required');
+
+		$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
 		
 		if ($this->form_validation->run() == false) {
-			$this->session->set_flashdata('bisnis', 'Gagal Ditambahkan Pastikan Data Terisi Dengan Benar');
-			redirect('main');	
+			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$this->session->set_flashdata('bisnis', 'Gagal Ditambahkan Pastikan Data Terisi Dengan Benar');
+				redirect('main');	
+			} else {
+				$this->session->set_flashdata('bisnis', 'Gagal Ditambahkan Pastikan Data Terisi Dengan Benar');
+				redirect('main/produk');	
+			}
+			
 		} else {
-			$this->BisnisModel->insertAgent();
-			$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
-			redirect('main');
+			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$this->BisnisModel->insertAgent();
+				$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+				redirect('main');	
+			} else {
+				$this->BisnisModel->insertAgent();
+				$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+				redirect('main/produk');
+			}
+			
 		}
 	}
 
@@ -122,14 +157,29 @@ class Main extends CI_Controller {
 		$this->form_validation->set_rules('namaA', 'Nama Agent', 'trim|required');
 		$this->form_validation->set_rules('noTelpA', 'No Telp Agent', 'trim|required');
 		$this->form_validation->set_rules('domisiliA', 'Domisili', 'trim|required');
+
+		$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
 	
 		if ($this->form_validation->run() == false) {
-			$this->session->set_flashdata('bisnis', 'Gagal Dirubah Pastikan Data Terisi Dengan Benar');
-			redirect('main');	
+			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$this->session->set_flashdata('bisnis', 'Gagal Dirubah Pastikan Data Terisi Dengan Benar');
+				redirect('main');	
+			} else {
+				$this->session->set_flashdata('bisnis', 'Gagal Dirubah Pastikan Data Terisi Dengan Benar');
+				redirect('main/produk');		
+			}
+			
 		} else {
-			$this->BisnisModel->updateAgent();
-			$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
-			redirect('main');
+			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				$this->BisnisModel->updateAgent();
+				$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+				redirect('main');
+			} else {
+				$this->BisnisModel->updateAgent();
+				$this->session->set_flashdata('bisnis', 'Form Berhasil diUpload');
+				redirect('main/produk');		
+			}
+			
 					
 		}
 	}
@@ -141,13 +191,28 @@ class Main extends CI_Controller {
 
 	public function hapusAgent($id)
     {
-		$this->BisnisModel->hapusDataAgent($id);
-		$this->session->set_flashdata('bisnis', 'Berhasil Dihapus');
-		redirect('main');
+
+	$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
+
+		if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+			$this->BisnisModel->hapusDataAgent($id);
+			$this->session->set_flashdata('bisnis', 'Berhasil Dihapus');
+			redirect('main');
+		} else {
+			$this->BisnisModel->hapusDataAgent($id);
+			$this->session->set_flashdata('bisnis', 'Berhasil Dihapus');
+			redirect('main/produk');		
+		}
+		
     }
 
 	public function load_testi(){
 		$lib['data']= $this->BisnisModel->getTesti()->result();
+		
+		return $lib;
+	}
+	public function load_testiP(){
+		$lib['data']= $this->BisnisModel->getTestiP()->result();
 		
 		return $lib;
 	}
@@ -190,7 +255,7 @@ class Main extends CI_Controller {
 	}
 
 	public function load_produk(){
-		$lib['testi'] = $this->load_testi();
+		$lib['testi'] = $this->load_testiP();
 		$lib['api'] = $this->load_api($this->load_pesan_produk());
 		$this->load->view('landing_produk',$lib);
 	}
