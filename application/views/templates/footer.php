@@ -2,25 +2,9 @@
     <footer id="contact-us">
         <div class="container">
             <div class="footer-content">
-                <div class="row">
-                    <!-- ***** Contact Form End ***** -->
-                    <div class="right-content col-lg-6 col-md-12 col-sm-12">
-                        <h2><em>More About Lava</em></h2>
-                        <p>Phasellus dapibus urna vel lacus accumsan, iaculis eleifend leo auctor. Duis at finibus odio.
-                            Vivamus ut pharetra arcu, in porta metus. Suspendisse blandit pulvinar ligula ut elementum.
-                            <br><br>If you need this contact form to send email to your inbox, you may follow our <a
-                                rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact</a> page
-                            for more detail.</p>
-                        <ul class="social">
-                            <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
+                <div class="" style="text-align:center">
                     <!-- ***** Contact Form Start ***** -->
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <!-- <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="contact-form">
                             <form id="contact" action="" method="post">
                                 <div class="row">
@@ -51,16 +35,31 @@
                                 </div>
                             </form>
                         </div>
+                    </div> -->
+                    <!-- ***** Contact Form End ***** -->
+                    <div class="right-content">
+                        <h2>More About Us</h2>
+                        <p>Ayo bergabung sekarang!! jangan sia-siakan kesempatan ini. Jika anda sekarang tidak segera bergabung mungkin tetangga anda atau sanak saudara anda akan mendahului anda.
+                            jangan sampai ketinggalan!!</p>
+                            <div style="text-align:center; margin-top:64px;">
+                                    <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
+                            </div>    
+                        <ul class="social">
+                            <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
                     </div>
-                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sub-footer">
-                        <!-- <p>Copyright &copy; 2020 Lava Landing Page
+                        <p>Copyright &copy; 2020 Islamic Business Landing Page
 
-                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p> -->
+                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo And FA-Bro</a></p>
                     </div>
                 </div>
             </div>

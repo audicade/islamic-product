@@ -127,18 +127,27 @@ class Main extends CI_Controller {
 		$agen['agen'] = $this->BisnisModel->getAgen($nama)->result();
 		return $agen;
 	}
-	public function load_bisnis(){
+	public function load_api(){
 		$name = $this->load_getURL();
-		$data = $this->load_testi();
 		$agen = $this->load_agen($name);
-		$lib['nama'] = $name;
+		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		foreach ($agen['agen'] as $row){
+			$telp = $row->no_telp;
+		}
+		$whatsapp = "http://api.whatsapp.com/send?";
+		$api = $whatsapp."phone=".$telp."&text=".$pesan;
+		return $api;
+	}
+	public function load_bisnis(){
+		$data = $this->load_testi();
+		$api = $this->load_api();
 		$lib['testi'] = $data;
-		$lib['agen'] = $agen;
+		$lib['api'] = $api;
 		$this->load->view('landing_bisnis',$lib);
 	}
 
 	public function load_produk(){
-		$lib['data']= $this->BisnisModel->getTesti()->result();
+		$lib['testi']= $this->load_testi();
 		$this->load->view('landing_produk',$lib);
 	}
 
