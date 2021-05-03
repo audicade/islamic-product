@@ -1,6 +1,15 @@
     <!-- ***** Welcome Area Start ***** -->
     <div class="welcome-area bg-prod" id="welcome">
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('bisnis');?>" nilai="0">
+        </div>
+        <?php 
+            if(isset($_SESSION['bisnis'])){
+                unset($_SESSION['bisnis']);
+            }
 
+            //preparing whatsapp message generator
+            
+        ?>
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
             <div class="container">
@@ -158,7 +167,7 @@
                                 if($this->session->userdata('admin_id')) :
                             ?>
                             <div class="centre">
-                                <a href="" data-toggle="modal" data-target="#testimoni">
+                                <a href="" data-toggle="modal" data-target="#testimoniP">
                                     <i class="fa fa-plus-circle" style="color: green; font-size: 50px;"></i>
                                 </a>
                             </div>
@@ -193,3 +202,50 @@
     </section>
     <!-- ***** Testimonials Ends ***** -->
 
+    <!-- Modal Tambah Testimoni Start -->
+    <div class="modal fade" id="testimoniP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Testimoni</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="user" method="post" action="<?= base_url('main/tambahTesti'); ?>" enctype="multipart/form-data">
+                    <div class="form-group" style="text-align:center">
+                        <img src="<?= base_url()?>assets/uploads/blank.png" alt="..." id="outputTestimoni2" class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 250px; "><br>
+                        <label for="exampleFormControlFile1">Upload Foto Testimoni</label><br>    
+                        <small class="form-text text-danger">Ukuran maksimal Foto 1920x1080 pixel, Berformat JPG atau PNG, 10MB</small>
+                        <input type="file" class="form-control-file" id="UploadFoto" name="UploadFoto" accept="image/*" onchange="loadFile(event)" >
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control " id="idTP" name="idTP" placeholder="Deskripsi" required>
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control " id="namaTP" name="namaTP" placeholder="Deskripsi" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>    
+                    <button type="submit" class="btn btn-success">Tambah Data</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Testimoni End-->
+
+
+    <script>
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+        var output = document.getElementById('outputTestimoni2');
+        output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
+    </script>

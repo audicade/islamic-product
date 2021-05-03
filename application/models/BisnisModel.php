@@ -15,12 +15,17 @@ class BisnisModel extends CI_Model
         $result = $this->db->get('testimoni');
         return $result;
     }
+    public function getTestiP(){
+        //preparing query                            
+        $result = $this->db->get('testimoni_produk');
+        return $result;
+    }
     public function getAgen($nama){
         $result = $this->db->query("SELECT no_telp FROM agen WHERE nama_agen='". $nama ."'");
         return $result;
     }
-    public function getAgent(){
-        $queryAgent = " SELECT * FROM `agen` ";
+    public function getAgent($type){
+        $queryAgent = " SELECT * FROM `agen` WHERE `kode` Like '%".$type."%' ";
         $agent = $this->db->query($queryAgent)->result_array();
 
         return $agent;
@@ -67,5 +72,14 @@ class BisnisModel extends CI_Model
    {
       return $this->db->get('agen')->num_rows();
    }
+   public function uploadTestiP($namaBerkas){
+        $data = [
+            
+            "nama" => $this->input->post('namaTP', true),
+            "url_testimoni" => $namaBerkas,
+            "id_produk" => $this->input->post('idTP', true),
+         ];
+        $this->db->insert('testimoni_produk', $data);
+    }
 
 }
