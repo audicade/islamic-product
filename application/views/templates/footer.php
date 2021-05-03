@@ -38,12 +38,12 @@
                     </div> -->
                     <!-- ***** Contact Form End ***** -->
                     <div class="right-content">
-                        <h2>More About Lava</h2>
-                        <p>Phasellus dapibus urna vel lacus accumsan, iaculis eleifend leo auctor. Duis at finibus odio.
-                            Vivamus ut pharetra arcu, in porta metus. Suspendisse blandit pulvinar ligula ut elementum.
-                            <br><br>If you need this contact form to send email to your inbox, you may follow our <a
-                                rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact</a> page
-                            for more detail.</p>
+                        <h2>More About Us</h2>
+                        <p>Ayo bergabung sekarang!! jangan sia-siakan kesempatan ini. Jika anda sekarang tidak segera bergabung mungkin tetangga anda atau sanak saudara anda akan mendahului anda.
+                            jangan sampai ketinggalan!!</p>
+                            <div style="text-align:center; margin-top:64px;">
+                                    <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
+                            </div>    
                         <ul class="social">
                             <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -57,9 +57,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="sub-footer">
-                        <!-- <p>Copyright &copy; 2020 Lava Landing Page
+                        <p>Copyright &copy; 2020 Islamic Business Landing Page
 
-                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p> -->
+                        | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo And FA-Bro</a></p>
                     </div>
                 </div>
             </div>

@@ -8,12 +8,7 @@
             }
 
             //preparing whatsapp message generator
-            $pesan = "Test%20auto%20chat%20web%20Islamic";
-            foreach ($agen['agen'] as $row){
-                $telp = $row->no_telp;
-            }
-            $whatsapp = "http://api.whatsapp.com/send?";
-            $api = $whatsapp."phone=".$telp."&text=".$pesan;
+            
         ?>
         <!-- ***** Header Text Start ***** -->
         <div class="header-text">
@@ -95,7 +90,7 @@
     <section class="section" id="promotion">
         <div class="container">
             <div class="center-heading">
-                <h2><em>Produk</em> Kami</h2>
+                <h2>Seputar<em>Produk</em> Kami</h2>
             </div>
             <div class="row">
                 <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
@@ -113,7 +108,7 @@
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
-                            <img style="margin-left:8px" width=85px height=85px src="<?= base_url(''); ?>/assets/images/benefit-icon-02.png" alt="">
+                            <img style="margin-left:8px; margin-top:12px" width=85px height=85px src="<?= base_url(''); ?>/assets/images/benefit-icon-02.png" alt="">
                             <div class="text">
                                 <h4>TERUJI KLINIS</h4>
                                 <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
