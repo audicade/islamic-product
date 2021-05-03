@@ -36,7 +36,7 @@ class BisnisModel extends CI_Model
        return $this->db->get_where('agen', ['id_agen' => $id])->row_array();
    }
 
-    public function ubahAgent()
+    public function updateAgent()
     {
         $data = [
             "kode" => $this->input->post('kodeA', true),
@@ -62,5 +62,10 @@ class BisnisModel extends CI_Model
 
         $this->db->insert('agen', $data);
     }
+
+    public function getCountAgent() 
+   {
+      return $this->db->get('agen')->num_rows();
+   }
 
 }
