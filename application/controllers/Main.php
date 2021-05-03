@@ -70,10 +70,10 @@ class Main extends CI_Controller {
 		$agen['agen'] = $this->BisnisModel->getAgen($nama)->result();
 		return $agen;
 	}
-	public function load_api(){
+	public function load_api($pesan_masuk){
 		$name = $this->load_getURL();
 		$agen = $this->load_agen($name);
-		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		$pesan = $pesan_masuk;
 		foreach ($agen['agen'] as $row){
 			$telp = $row->no_telp;
 		}
@@ -81,16 +81,25 @@ class Main extends CI_Controller {
 		$api = $whatsapp."phone=".$telp."&text=".$pesan;
 		return $api;
 	}
+	public function load_pesan_bisnis(){
+		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		return $pesan;
+	}
+	public function load_pesan_produk(){
+		$pesan = "Test%20auto%20chat%20web%20Islamic";
+		return $pesan;
+	}
 	public function load_bisnis(){
 		$data = $this->load_testi();
-		$api = $this->load_api();
+		$api = $this->load_api($this->load_pesan_bisnis());
 		$lib['testi'] = $data;
 		$lib['api'] = $api;
 		$this->load->view('landing_bisnis',$lib);
 	}
 
 	public function load_produk(){
-		$lib['testi']= $this->load_testi();
+		$lib['testi'] = $this->load_testi();
+		$lib['api'] = $this->load_api($this->load_pesan_produk());
 		$this->load->view('landing_produk',$lib);
 	}
 

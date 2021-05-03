@@ -6,11 +6,11 @@
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s" style="text-align: justify">
                         <h1 style="font-size:49px">Produk <em>Halal</em> Dan <em>Bermanfaat</em></h1>
-                        <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
-                        sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p> 
-                        <a href="#about" class="main-button-slider">KNOW US BETTER</a>
+                        <p><b style="font-size:28px"> British Propolis </b>adalah produk <b style="font-size:22px">herbal</b> yang memiliki beragam manfaat. 
+                           <b style="font-size:28px"> British Propolis </b> yang merupakan salah satu produk hasil dari lebah, sehingga aman dan halal untuk dikonsumsi.</b>.</p> 
+                        <a href=<?php echo $api?> class="main-button-slider">Pesan Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -19,13 +19,38 @@
     </div>
     <!-- ***** Welcome Area End ***** -->
 
-    <!-- ***** Business Features Big Item Start ***** -->
+    <!-- ***** Product Benefits Start ***** -->
     <section class="section" id="about">
         <div class="container">
             <div class="center-heading">
-                <h2><em>Keuntungan</em> Berbisnis Bersama Kami</h2>
+                <h2>Manfaat <em>British Propolis</em></h2>
             </div>
-            <div class="row">
+            <!-- List of benefits -->
+            <div class="right-text offset-lg-1 mobile-bottom-fix">
+                <ul style="list-style: circle !important">
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" style="padding:16px">
+                        <div class="text">
+                            <h4>Memiliki Beragam Nutrisi</h4>
+                            <p>Ragam nutrisi yang terkandung British propolis antara lain lulus LPPOM Majelis Ulama Indonesia</a></p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s" style="padding:16px">
+                        <div class="text">
+                            <h4>TERUJI KLINIS</h4>
+                            <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
+                            <a rel="nofollow" href="https://www.alodokter.com/kenyataan-mengenai-propolis" target="_blank">Disini</a> untuk tahu lebih banyak</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
+                        <div class="text">
+                            <h4>PELUANG PASAR YANG LUAS</h4>
+                            <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <div class="features-item">
@@ -68,10 +93,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
-    <!-- ***** Features Big Item End ***** -->
+    <!-- ***** Product Benefits End ***** -->
 
     <div class="left-image-decor"></div>
 
@@ -79,7 +104,7 @@
     <section class="section" id="promotion">
         <div class="container">
             <div class="center-heading">
-                <h2>Seputar <em>British Propolis</em></h2>
+                <h2>Mengapa Memilih <em>British Propolis</em>?</h2>
             </div>
             <div class="row">
                 <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
@@ -127,7 +152,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="center-heading">
                         <h2>Pengalaman <em>Sukses</em> Bersama Kami</h2>
-                        <p>Inilah testimoni dari beberapa rekan yang bekerja sama dengan kami.</p> &nbsp;
+                        <p>Inilah testimoni dari beberapa konsumen yang telah menggunakan <b>British Propolis</b>.</p> &nbsp;
                         
                             <?php
                                 if($this->session->userdata('admin_id')) :
