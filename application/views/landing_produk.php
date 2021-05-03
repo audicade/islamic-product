@@ -6,9 +6,9 @@
             <div class="container">
                 <div class="row">
                     <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12"
-                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s" style="text-align: justify">
+                        data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                         <h1 style="font-size:49px">Produk <em>Halal</em> Dan <em>Bermanfaat</em></h1>
-                        <p><b style="font-size:28px"> British Propolis </b>adalah produk <b style="font-size:22px">herbal</b> yang memiliki beragam manfaat. 
+                        <p style="text-align: justify"><b style="font-size:28px"> British Propolis </b>adalah produk <b style="font-size:22px">herbal</b> yang memiliki beragam manfaat. 
                            <b style="font-size:28px"> British Propolis </b> yang merupakan salah satu produk hasil dari lebah, sehingga aman dan halal untuk dikonsumsi.</b>.</p> 
                         <a href=<?php echo $api?> class="main-button-slider">Pesan Sekarang</a>
                     </div>
@@ -37,65 +37,43 @@
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s" style="padding:16px">
                         <div class="text">
-                            <h4>Mengandung Vitamin</h4>
+                            <h4>Mengandung Ragam Vitamin</h4>
                             <p>Selain Mineral yang berguna bagi tubuh, British Propolis juga mengandung beragam vitamin. 
                                 Ragam vitamin yang terkandung antara lain adalah vitamin B yang baik untuk kesehatan syaraf, Vitamin C yang berfungsi untuk meningkatkan imun tubuh, dan Vitamin E yang baik untuk kesehatan kulit.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>PELUANG PASAR YANG LUAS</h4>
-                            <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. 
-                                Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
+                            <h4>Menyembuhkan Luka di Kulit</h4>
+                            <p>Manfaat propolis dalam menyembuhkan luka pada kulit sudah dilakukan sejak zaman dahulu. Propolis umumnya digunakan untuk menyembuhkan luka di kulit, termasuk luka bakar ringan.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
+                        <div class="text">
+                            <h4>Mengontrol Kadar Gula dan Kolesterol</h4>
+                            <p>Bukan menjadi rahasia umum, alasan masyarakat untuk mengkonsumsi propolis adalah untuk mengurangi kadar gula dan kolesterol dalam darah dan itu sudah terbukti secara klinis!!</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
+                        <div class="text">
+                            <h4>Menghambat Pertumbuhan Sel Kanker</h4>
+                            <p>Propolis juga dapat mencegah tumbuhnya sel kanker. Hal ini dikarenakan propolis mengandung senyawa antioksidan yang membantu tubuh untuk menangkal radikal bebas.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
+                        <div class="text">
+                            <h4>Menyembuhkan Luka di Kulit</h4>
+                            <p>Manfaat propolis dalam menyembuhkan luka pada kulit sudah dilakukan sejak zaman dahulu. Propolis umumnya digunakan untuk menyembuhkan luka di kulit, termasuk luka bakar ringan.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
+                        <div class="text">
+                            <h4>Menjaga Otak Tetap Sehat</h4>
+                            <p>Propolis mengandung zat anti radang yang bersama dengan senyawa antioksidan dapat membantu tubuh untuk memperbaiki jaringan syaraf otak yang rusak, sehingga dapat memberikan efek meningkatkan daya ingat penggunanya!!</p>
                         </div>
                     </li>
                 </ul>
             </div>
-
-            <!-- <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>01</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-1.png" alt="">
-                            <h4>Pelatihan Usaha</h4>
-                            <p>Kami akan membantu anda untuk bersama-sama berkembang dalam bisnis dan pemasaran.</p>
-                            <a href="#testimonials" class="main-button">
-                                Baca Lebih Lanjut
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>02</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-2.png" alt="">
-                            <h4>Mudah Dilakukan</h4>
-                            <p>Berbisnis dapat dilakukan dengan mudah. Dapat disesuaikan dengan kemampuan anda</p>
-                            <a href="#testimonials" class="main-button">
-                                Pahami Lebih Banyak
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
-                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <div class="features-item">
-                        <div class="features-icon">
-                            <h2>03</h2>
-                            <img src="<?= base_url(''); ?>/assets/images/features-icon-3.png" alt="">
-                            <h4>Tanpa Resiko</h4>
-                            <p>Kami garansi gagal uang kembali, Barang bisa ditukar uang kembali sesuai syarat yang berlaku.</p>
-                            <a href="#testimonials" class="main-button">
-                                Simak Selanjutnya
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
     <!-- ***** Product Benefits End ***** -->
@@ -153,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="center-heading">
-                        <h2>Pengalaman <em>Sukses</em> Bersama Kami</h2>
+                        <h2>Pengalaman <b>Sehat</b> Bersama <em>British Propolis</em></h2>
                         <p>Inilah testimoni dari beberapa konsumen yang telah menggunakan <b>British Propolis</b>.</p> &nbsp;
                         
                             <?php
