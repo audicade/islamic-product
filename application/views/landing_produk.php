@@ -39,45 +39,45 @@
                 <ul style="list-style: circle !important">
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s" style="padding:16px">
                         <div class="text">
-                            <h4>Mengandung Ragam Mineral</h4>
+                            <h4><em>Mengandung Ragam Mineral</em></h4>
                             <p>British Propolis mengandung beragam nutrisi yang sangat bermanfaat bagi tubuh. 
                                 Ragam nutrisi yang terkandung antara lain adalah karbohidrat, protein, magnesium, kalium zat besi kandungan nutrisi tersebut sangatlah bagus untuk memenuhi kebutuhan mineral dalam tubuh.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s" style="padding:16px">
                         <div class="text">
-                            <h4>Mengandung Ragam Vitamin</h4>
+                            <h4><em>Mengandung Ragam Vitamin</em></h4>
                             <p>Selain Mineral yang berguna bagi tubuh, British Propolis juga mengandung beragam vitamin. 
                                 Ragam vitamin yang terkandung antara lain adalah vitamin B yang baik untuk kesehatan syaraf, Vitamin C yang berfungsi untuk meningkatkan imun tubuh, dan Vitamin E yang baik untuk kesehatan kulit.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>Menyembuhkan Luka di Kulit</h4>
+                            <h4><em>Menyembuhkan Luka di Kulit</em></h4>
                             <p>Manfaat propolis dalam menyembuhkan luka pada kulit sudah dilakukan sejak zaman dahulu. Propolis umumnya digunakan untuk menyembuhkan luka di kulit, termasuk luka bakar ringan.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>Mengontrol Kadar Gula dan Kolesterol</h4>
+                            <h4><em>Mengontrol Kadar Gula dan Kolesterol</em></h4>
                             <p>Bukan menjadi rahasia umum, alasan masyarakat untuk mengkonsumsi propolis adalah untuk mengurangi kadar gula dan kolesterol dalam darah dan itu sudah terbukti secara klinis!!</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>Menghambat Pertumbuhan Sel Kanker</h4>
+                            <h4><em>Menghambat Pertumbuhan Sel Kanker</em></h4>
                             <p>Propolis juga dapat mencegah tumbuhnya sel kanker. Hal ini dikarenakan propolis mengandung senyawa antioksidan yang membantu tubuh untuk menangkal radikal bebas.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>Menyembuhkan Luka di Kulit</h4>
+                            <h4><em>Menyembuhkan Luka di Kulit</em></h4>
                             <p>Manfaat propolis dalam menyembuhkan luka pada kulit sudah dilakukan sejak zaman dahulu. Propolis umumnya digunakan untuk menyembuhkan luka di kulit, termasuk luka bakar ringan.</p>
                         </div>
                     </li>
                     <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s" style="padding:16px">
                         <div class="text">
-                            <h4>Menjaga Otak Tetap Sehat</h4>
+                            <h4><em>Menjaga Otak Tetap Sehat</em></h4>
                             <p>Propolis mengandung zat anti radang yang bersama dengan senyawa antioksidan dapat membantu tubuh untuk memperbaiki jaringan syaraf otak yang rusak, sehingga dapat memberikan efek meningkatkan daya ingat penggunanya!!</p>
                         </div>
                     </li>
