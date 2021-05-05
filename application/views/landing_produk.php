@@ -98,7 +98,7 @@
             <div class="row">
                 <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="<?= base_url(''); ?>/assets/images/left-image-new.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                    <img src="<?= base_url(''); ?>/assets/images/left-image-prod.png" class="rounded img-fluid d-block mx-auto" alt="App">
                     <h4 style="text-align:center; padding-top:18px"><b><strong>BRITISH PROPOLIS</strong></b></h4>
                 </div>
                 <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
@@ -119,7 +119,7 @@
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
-                            <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/benefit-icon-03.png" alt="">
+                            <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/left-image-new.png" alt="">
                             <div class="text">
                                 <h4>NYAMAN DIKONSUMSI</h4>
                                 <p style="text-align:justify"   >British Propolis merupakan produk herbal hasil dari lebah. Selain memiliki banyak manfaat British Propolis tentu nyaman dan aman untuk dikonsumsi.</p>
@@ -135,7 +135,7 @@
     <div class="right-image-decor"></div>
 
     <!-- ***** Testimonials Starts ***** -->
-    <section class="section" id="testimonials" style="margin-top:128px; margin-left:-48px !important">
+    <section class="section" id="testimonials" style="margin-top:64px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">

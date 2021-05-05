@@ -2,10 +2,12 @@
     <footer id="contact-us">
         <div class="container">
             <div class="footer-content">
-                <div class="" style="text-align:center">
+                <div class="row" style="">
                     <!-- ***** Contact Form Start ***** -->
-                    <!-- <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="contact-form">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="<?= base_url(''); ?>/assets/images/footer-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                        
+                        <!-- <div class="contact-form">
                             <form id="contact" action="" method="post">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
@@ -34,10 +36,10 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                     <!-- ***** Contact Form End ***** -->
-                    <div class="right-content">
+                    <div class="right-content col-lg-6 col-md-12 col-sm-12">
                         <h2>More About Us</h2>
                         <p>Ayo bergabung sekarang!! jangan sia-siakan kesempatan ini. Jika anda sekarang tidak segera bergabung mungkin tetangga anda atau sanak saudara anda akan mendahului anda.
                             jangan sampai ketinggalan!!</p>

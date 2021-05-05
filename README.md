@@ -5,7 +5,7 @@
 1. Seputar Pelatihan Usaha  (**done**)
 2. Insert Testimonials      (**done**)
 3. Tampilin Workflow Usaha  (*not-done*) *escalated*
-4. Benahin Footer           (*not-done*)
+4. Benahin Footer           (**done**)
 5. Integrasikan Get-Post URL(**done**)
 6. Cek seluruh Link API WA  (**done**)
 7. CRUD Data Agen			(**Done**)
