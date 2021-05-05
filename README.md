@@ -7,7 +7,7 @@
 3. Tampilin Workflow Usaha  (*not-done*) *escalated*
 4. Benahin Footer           (*not-done*)
 5. Integrasikan Get-Post URL(**done**)
-6. Cek seluruh Link API WA  (*not-done*)
+6. Cek seluruh Link API WA  (**done**)
 7. CRUD Data Agen			(**Done**)
 8. Auto Generate link		(**Done**)
 9. Hosting					(_Not yet_)
