@@ -19,7 +19,7 @@
                         <h1 style="font-size:49px">Produk <em>Halal</em> Dan <em>Bermanfaat</em></h1>
                         <p style="text-align: justify"><b style="font-size:28px"> British Propolis </b>adalah produk <b style="font-size:22px">herbal</b> yang memiliki beragam manfaat. 
                            <b style="font-size:28px"> British Propolis </b> yang merupakan salah satu produk hasil dari lebah sang serangga ajaib, sehingga aman dan halal untuk dikonsumsi.</b>.</p> 
-                        <a href=<?php echo $api?> class="main-button-slider">Pesan Sekarang</a>
+                        <a href="<?php echo $api ?>" class="main-button-slider">Pesan Sekarang!!</a>
                     </div>
                 </div>
             </div>
@@ -107,22 +107,22 @@
                             <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/benefit-icon-01.png" alt="">
                             <div class="text">
                                 <h4>LULUS UJI LPPOM MUI</h4>
-                                <p>British propolis sudah <a rel="nofollow" href="http://www.halalmui.org/mui14/searchproduk/search?kategori=nama_produk&katakunci=british+propolis" target="_blank">lulus LPPOM Majelis Ulama Indonesia</a>. Sehingga British Propolis dapat dengan nyaman dikonsumsi oleh konsumen muslim.</p>
+                                <p style="text-align:justify">British propolis sudah <a rel="nofollow" href="http://www.halalmui.org/mui14/searchproduk/search?kategori=nama_produk&katakunci=british+propolis" target="_blank">lulus LPPOM Majelis Ulama Indonesia</a>. Sehingga British Propolis dapat dengan nyaman dikonsumsi oleh konsumen muslim.</p>
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
                             <img style="margin-left:8px; margin-top:12px" width=85px height=85px src="<?= base_url(''); ?>/assets/images/benefit-icon-02.png" alt="">
                             <div class="text">
                                 <h4>TERUJI KLINIS</h4>
-                                <p>British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
+                                <p style="text-align:justify">British Propolis sudah teruji klinis sebagai produk herbal yang ampuh mengatasi berbagai masalah kesehatan. Cek
                                 <a rel="nofollow" href="https://www.alodokter.com/kenyataan-mengenai-propolis" target="_blank">Disini</a> untuk tahu lebih banyak</p>
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
                             <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/benefit-icon-03.png" alt="">
                             <div class="text">
-                                <h4>PELUANG PASAR YANG LUAS</h4>
-                                <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
+                                <h4>NYAMAN DIKONSUMSI</h4>
+                                <p style="text-align:justify"   >British Propolis merupakan produk herbal hasil dari lebah. Selain memiliki banyak manfaat British Propolis tentu nyaman dan aman untuk dikonsumsi.</p>
                             </div>
                         </li>
                     </ul>

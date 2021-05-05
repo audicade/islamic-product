@@ -153,7 +153,7 @@ a.main-button-slider {
   font-size: 14px;
   border-radius: 25px;
   padding: 15px 25px;
-  background-color: #ff3e3e;
+  background-color: #b91717;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -165,14 +165,14 @@ a.main-button-slider {
 }
 
 a.main-button-slider:hover {
-  background-color: #f1556a;
+  background-color: #ff0022;
 }
 
 a.main-button {
   font-size: 14px;
   border-radius: 25px;
   padding: 15px 25px;
-  background-color: #ff3e3e;
+  background-color: #b91717;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -184,7 +184,7 @@ a.main-button {
 }
 
 a.main-button:hover {
-  background-color: #f1556a;
+  background-color: #ff0022;
 }
 
 button.main-button {
@@ -194,7 +194,7 @@ button.main-button {
   font-size: 14px;
   border-radius: 25px;
   padding: 15px 25px;
-  background-color: #ff3e3e;
+  background-color: #b91717;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -206,7 +206,7 @@ button.main-button {
 }
 
 button.main-button:hover {
-  background-color: #f1556a;
+  background-color: #ff0022;
 }
 
 

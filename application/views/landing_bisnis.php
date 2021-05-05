@@ -21,7 +21,7 @@
                         Nama Saya Ilham dan dalam sepuluh menit kedepan saya akan menunjukkan kepada anda cara berbisnis dengan mudah dan halal, tanpa menggunakan sistem <del>Multi-level Marketing</del></p>
                         <!-- <p>Perusahaan kami menggunakan basis pemasaran <b style="font-size:24px">terpusat</b>, yaitu adanya agen pada daerah masing-masing dengan produk yang dipasok dari <b style="font-size:20px">pusat</b> 
                         sehingga kami bukanlah perusahaan berbasis <b style=><del>Multi Level Marketing</del></b>.</p>  -->
-                        <a href=<?php echo $api ?> target="_blank" class="main-button-slider">Mulai berbisnis!</a>
+                        <a href="<?php echo $api ?>" target="_blank" class="main-button-slider">Mulailah Sekarang !!</a>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,8 @@
                             <img src="<?= base_url(''); ?>/assets/images/features-icon-3.png" alt="">
                             <h4>Tanpa Resiko</h4>
                             <p>Kami garansi gagal uang kembali, Barang bisa ditukar uang kembali sesuai syarat yang berlaku.</p>
-                            <a href="#testimonials" class="main-button">
-                                Simak Selanjutnya
+                            <a href="<?php echo $api ?>" target="_blank" class="main-button">
+                                Tanyakan Langsung
                             </a>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
             </div>
         </div>    
         <div style="text-align:center; margin-top:64px;">
-                <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
+                <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulailah Sekarang !!</a>
         </div>    
     </section>
     <!-- ***** Product Introduction End ***** -->

@@ -243,7 +243,7 @@ class Main extends CI_Controller {
 		return $pesan;
 	}
 	public function load_pesan_produk(){
-		$pesan = "Halo%20Kak%20".$this->load_getURL().",%20Saya%20ingin%20memsan%20produk%20ajaib%20British%20Propolis";
+		$pesan = "Halo%20Kak%20".$this->load_getURL().",%20Saya%20ingin%20memesan%20produk%20ajaib%20British%20Propolis";
 		return $pesan;
 	}
 	public function load_bisnis(){

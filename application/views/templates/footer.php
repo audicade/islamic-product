@@ -42,7 +42,7 @@
                         <p>Ayo bergabung sekarang!! jangan sia-siakan kesempatan ini. Jika anda sekarang tidak segera bergabung mungkin tetangga anda atau sanak saudara anda akan mendahului anda.
                             jangan sampai ketinggalan!!</p>
                             <div style="text-align:center; margin-top:64px;">
-                                    <a href="<?php echo $api ?>" target="_blank" class="main-button">Mulai berbisnis!</a>
+                                    <a href="<?php echo $api ?>" target="_blank" class="main-button">Hubungi Kami!!</a>
                             </div>    
                         <!-- <ul class="social">
                             <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
