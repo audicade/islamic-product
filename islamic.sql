@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 03, 2021 at 11:19 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Host: localhost
+-- Generation Time: May 05, 2021 at 07:03 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,33 +44,6 @@ INSERT INTO `admin` (`admin_id`, `username`, `password`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `agen`
---
-
-CREATE TABLE `agen` (
-  `id_agen` int(11) NOT NULL,
-  `kode` varchar(5) NOT NULL,
-  `nama_agen` varchar(255) NOT NULL,
-  `no_telp` bigint(20) NOT NULL,
-  `domisili` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `agen`
---
-
-INSERT INTO `agen` (`id_agen`, `kode`, `nama_agen`, `no_telp`, `domisili`) VALUES
-(1, 'A0001', 'Faisal', 6282217401318, 'Surabaya'),
-(2, 'A0002', 'Ilham Darussalam', 6282217401318, 'Surabaya'),
-(4, 'A0003', 'Audi', 6281230425724, 'Surabaya'),
-(5, 'B0004', 'Audi pratama putra', 6281230425724, 'Surabaya'),
-(6, 'B0001', 'haha hihi huhu hehe hoho', 6281230425724, 'Surabaya'),
-(7, 'B0002', 'Aurelia Amanda Syifa', 6281230425724, 'Surabaya'),
-(8, 'B0003', 'Tres Bien', 6281230425724, 'Surabaya');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `perusahaan`
 --
 
@@ -80,19 +53,6 @@ CREATE TABLE `perusahaan` (
   `alamat_perusahaan` varchar(255) NOT NULL,
   `telp_perusahaan` varchar(15) NOT NULL,
   `email_perusahaan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `produk`
---
-
-CREATE TABLE `produk` (
-  `id_produk` int(11) NOT NULL,
-  `nama_produk` varchar(255) NOT NULL,
-  `url_gambar` varchar(255) NOT NULL,
-  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -127,11 +87,18 @@ INSERT INTO `testimoni` (`id_testimoni`, `url_testimoni`, `highlights`) VALUES
 --
 
 CREATE TABLE `testimoni_produk` (
-  `id_testiproduk` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `url_testiproduk` varchar(255) NOT NULL,
-  `id_produk` int(11) NOT NULL
+  `id_testimoni` int(11) NOT NULL,
+  `url_testimoni` varchar(255) NOT NULL,
+  `highlights` varchar(255) NOT NULL DEFAULT 'Barang Cepat Laku!!'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `testimoni_produk`
+--
+
+INSERT INTO `testimoni_produk` (`id_testimoni`, `url_testimoni`, `highlights`) VALUES
+(1, 'Testi2.jpeg', 'Produk untung besar!!'),
+(2, 'Testi4.jpeg', 'Produk laku hanya dalam 1 minggu!!');
 
 --
 -- Indexes for dumped tables
@@ -144,23 +111,10 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `agen`
---
-ALTER TABLE `agen`
-  ADD PRIMARY KEY (`id_agen`),
-  ADD UNIQUE KEY `kode` (`kode`);
-
---
 -- Indexes for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   ADD PRIMARY KEY (`id_perusahaan`);
-
---
--- Indexes for table `produk`
---
-ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indexes for table `testimoni`
@@ -172,8 +126,7 @@ ALTER TABLE `testimoni`
 -- Indexes for table `testimoni_produk`
 --
 ALTER TABLE `testimoni_produk`
-  ADD PRIMARY KEY (`id_testiproduk`),
-  ADD KEY `testiproduk_produk` (`id_produk`);
+  ADD PRIMARY KEY (`id_testimoni`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -186,22 +139,10 @@ ALTER TABLE `admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `agen`
---
-ALTER TABLE `agen`
-  MODIFY `id_agen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
 -- AUTO_INCREMENT for table `perusahaan`
 --
 ALTER TABLE `perusahaan`
   MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `produk`
---
-ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
@@ -213,17 +154,7 @@ ALTER TABLE `testimoni`
 -- AUTO_INCREMENT for table `testimoni_produk`
 --
 ALTER TABLE `testimoni_produk`
-  MODIFY `id_testiproduk` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `testimoni_produk`
---
-ALTER TABLE `testimoni_produk`
-  ADD CONSTRAINT `testiproduk_produk` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
