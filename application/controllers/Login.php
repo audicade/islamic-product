@@ -14,11 +14,11 @@ class Login extends CI_Controller {
 		$password = $this->input->post('passwordL');
 		
 		$user = $this->db->get_where('admin', ['email' => $email])->row_array();
-		$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
+        $url = $this->input->post('landing',true);
+		$landing = substr($url,33,6);
 
 		// jika user ada
 		if($user) {
-			
 			// cek password
 			if($password == $user['password']){
 				
@@ -28,50 +28,60 @@ class Login extends CI_Controller {
 				$this->session->set_userdata('admin_id', $user['admin_id']);
 				$this->session->set_userdata($data);
 				
-				if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				if ($landing == "bisnis" || $landing == "") {
 				$this->session->set_flashdata('bisnis', 'Berhasil Login');
-				redirect('main');	
-				} else {
+				redirect('bisnis');	
+				} else if ($landing == "produk") {
 					$this->session->set_flashdata('bisnis', 'Berhasil Login');
-					redirect('main/produk');
+					redirect('produk');
 				}
 					
 			} else {
-				if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+				if ($landing == "bisnis" || $landing == "") {
 				$this->session->set_flashdata('bisnis', 'Password Salah!');
-				redirect('main');
-				} else {
+				redirect('bisnis');
+				} else if($landing == "produk"){
 					$this->session->set_flashdata('bisnis', 'Password Salah!');
-					redirect('main/produk');
+					redirect('produk');
 				}
-					
 			}
 				
 		} else{
-			if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
+			if ($landing == "bisnis" || $landing == "") {
 				$this->session->set_flashdata('bisnis', 'Akun Tidak Terdaftar!');
-				redirect('main');
-			} else {
+				redirect('bisnis');
+			} else if ($landing == "produk"){
 				$this->session->set_flashdata('bisnis', 'Akun Tidak Terdaftar!');
-				redirect('main/produk');
+				redirect('produk');
 			}
-            
 		}
 	}
 
-	public function logout()
-	{
-		$url = $_SERVER['APP_URL'].$_SERVER['REQUEST_URI'];
+	public function routeLogout(){
+		$landingOut = $this->input->post('landingOut',true);
+		$route = substr($landingOut,33,6);
 
-		if ($url == "http://localhost/islamic-product/main" || $url == "https://localhost/islamic-product/") {
-				$this->session->sess_destroy();
-				redirect('main','refresh');
-			} else {
-				$this->session->sess_destroy();
-				redirect('main/produk','refresh');
-			}
-		
+		if ($route == "bisnis" || $route == "") {
+			redirect('login/logoutBisnis');
+			echo $route;
+		} else if ($route == "produk") {
+			redirect('login/logoutProduk');
+			echo $route;
+		} else {
+			echo $route;
+		}
+	}	
+
+	public function logoutBisnis()
+	{	
+		$this->session->sess_destroy();
+		redirect('bisnis');
+	}
+
+	public function logoutProduk()
+	{
+		$this->session->sess_destroy();
+		redirect('produk');
 	}
 
 }
-

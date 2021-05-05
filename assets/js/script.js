@@ -1,10 +1,14 @@
 $('.ModalUbahAgen').on('click', function() {
 
+    var url = window.location.href;
+
+    $('#landingUbah').val(url);
+
     const id = $(this).data('id');
     // console.log(id);
     
     $.ajax({
-        url: 'http://localhost/islamic-product/main/getInfoAgent',
+        url: 'http://localhost/islamic-product/bisnis/getInfoAgent',
         data: {id : id},
         method: 'post',
         dataType: 'json',
@@ -35,7 +39,7 @@ $('.ModalUbahAgen').on('click', function() {
     // console.log(id);
 
     $.ajax({
-        url: 'http://localhost/islamic-product/main/getInfoAgent',
+        url: 'http://localhost/islamic-product/bisnis/getInfoAgent',
         data: {id : id},
         method: 'post',
         dataType: 'json',
@@ -54,6 +58,30 @@ $('.ModalUbahAgen').on('click', function() {
         
         });
         
+    });
+
+    $('.getLanding').on('click', function() {
+
+        var url = window.location.href;
+
+        $('#landing').val(url);
+
+    });
+
+    $('.getLandingOut').on('click', function() {
+
+        var url = window.location.href;
+
+        $('#landingOut').val(url);
+
+    });
+
+    $('.getLandingTambah').on('click', function() {
+
+        var url = window.location.href;
+
+        $('#landingTambah').val(url);
+
     });
 
     $('.getTrueUrl').on('click', function() {

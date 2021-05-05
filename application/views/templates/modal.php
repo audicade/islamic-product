@@ -10,6 +10,9 @@
                 </div>
                 <div class="modal-body">
                     <form method="post" action="<?= base_url('login'); ?>">
+                    <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="landing" name="landing" hidden>
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control form-control-user" id="emailL" name="emailL" placeholder="Email...">
                         </div>
@@ -38,10 +41,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                <form method="post" action="<?= base_url('login/routeLogout'); ?>">
                     <p>Apakah anda yakin akan mengakhiri sesi anda ?</p>
+                    <input type="text" class="form-control form-control-user" id="landingOut" name="landingOut" hidden>
                 </div>    
                 <div class="modal-footer">
-                <form method="post" action="<?= base_url('login/logout'); ?>">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <button class="btn btn-success" type="submit">Yakin</button>
                 </form>
@@ -62,12 +66,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <a data-toggle="modal" data-target="#tambahAgen" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm " style="color: #ffff;">
+                    <a data-toggle="modal" data-target="#tambahAgen" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm getLandingTambah" style="color: #ffff;">
                         <i class="fa fw fa-plus"></i> Tambah Agen</a> <br> <br>
                     <table class="table table-white">
                         <thead>
                             <tr>
-                            <th scope="col">ID</th>
                             <th scope="col">Kode</th>
                             <th scope="col">Nama</th>
                             <th scope="col">No. Telp</th>
@@ -81,8 +84,7 @@
                             foreach ($agent as $gen){
                         ?> 
                             <tr>
-                            <th scope="row"><?= $gen['id_agen']; ?></th>
-                            <td><?= $gen['kode']; ?></td>
+                            <td scope="row"><?= $gen['kode']; ?></td>
                             <td><?= $gen['nama_agen']; ?></td>
                             <td><?= $gen['no_telp']; ?></td>
                             <td><?= $gen['domisili']; ?></td>
@@ -91,7 +93,7 @@
                                     data-target="#getURL" data-id="<?= $gen['id_agen']; ?>"><i class="fas fa-pen" data-dismiss="modal"></i>URL</button>
                                 <button href=""  class="btn btn-warning ml-1 ModalUbahAgen" data-toggle="modal"
                                     data-target="#formUbahAgen" data-id="<?= $gen['id_agen']; ?>"><i class="fas fa-pen" data-dismiss="modal"></i>Edit</button>
-                                <a href="<?=base_url(); ?>main/hapusAgent/<?= $gen['id_agen']; ?>"  class="btn btn-danger ml-1 " onclick="return confirm('Apakah anda yakin ingin menghapus data agen ini?');"></i>Hapus</button>
+                                <a href="<?=base_url(); ?>bisnis/hapusAgent/<?= $gen['kode']; ?>"  class="btn btn-danger ml-1 getLandingHapus" onclick="return confirm('Apakah anda yakin ingin menghapus data agen ini?');"></i>Hapus</button>
                             </td>
                             </tr>
                         <?php
@@ -120,8 +122,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?= base_url('main/ubahAgent'); ?>">
+                    <form method="post" action="<?= base_url('bisnis/ubahAgent'); ?>">
                         <input type="text" name='idA' id='idA' value="1" hidden>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="landingUbah" name="landingUbah" value=" " hidden>
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control form-control-user" id="kodeA" name="kodeA" placeholder="Kode...">
                         </div>
@@ -156,7 +161,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?= base_url('main/tambahAgent'); ?>">
+                    <form method="post" action="<?= base_url('bisnis/tambahAgent'); ?>">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" id="landingTambah" name="landingTambah" hidden>
+                        </div>
                         <div class="form-group">
                             <input type="text" class="form-control form-control-user" id="kodeB" name="kodeB" placeholder="Kode...">
                         </div>
@@ -180,7 +188,7 @@
     </div>
     <!-- Modal Tambah Agen -->
 
-    <!-- Modal Tambah Agen -->
+    <!-- Modal Get URL -->
     <div class="modal fade" id="getURL" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -195,7 +203,7 @@
                         <input type="text" class="form-control form-control-user" id="NamaURL" name="NamaURL" style="background-color: #ffff;" readonly>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="URL" name="URL" style="background-color: #ffff;" readonly>
+                        <textarea class="form-control form-control-user" id="URL" name="URL" style="background-color: #ffff;" readonly></textarea>
                     </div>
                     <button class="btn btn-success getTrueUrl" type="button" >Mendapatkan URL</button>
                 </div>
@@ -205,4 +213,4 @@
             </div>
         </div>
     </div>
-    <!-- Modal Tambah Agen -->
+    <!-- Modal Get URL -->

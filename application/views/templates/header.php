@@ -47,7 +47,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="<?= base_url('main/index'); ?>" class="logo">
+                        <a href="<?= base_url('bisnis/index'); ?>" class="logo">
                             Islamic
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -72,13 +72,13 @@
                             <?php
                                 if($this->session->userdata('admin_id')) :
                             ?>
-                            <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#logout">Logout</a></li>
+                            <li class="scroll-to-section getLandingOut"><a href="" data-toggle="modal" data-target="#logout">Logout</a></li>
                             <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#agen">Agen</a></li>
 
                             <?php
                                 else :
                             ?>
-                            <li class="scroll-to-section"><a href="" data-toggle="modal" data-target="#admin">Admin</a></li>
+                            <li class="scroll-to-section getLanding"><a href="" data-toggle="modal" data-target="#admin">Admin</a></li>
                 
                             <?php
                                 endif;

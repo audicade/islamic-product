@@ -31,9 +31,9 @@ class BisnisModel extends CI_Model
         return $agent;
     }
 
-    public function hapusDataAgent($id)
+    public function hapusDataAgent($kode)
     {
-        $this->db->delete('agen', ['id_agen' => $id]);
+        $this->db->delete('agen', ['kode' => $kode]);
     }
 
     public function getAgentById($id)
