@@ -116,7 +116,7 @@
                             </div>
                         </li>
                         <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
-                            <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/benefit-icon-03.png" alt="">
+                            <img width=100px height=100px src="<?= base_url(''); ?>/assets/images/banner-bg-product.png" alt="">
                             <div class="text">
                                 <h4>PELUANG PASAR YANG LUAS</h4>
                                 <p>Peluang pasar British Propolis sebagai produk kesehatan sangatlah luas. Masyarakat saat ini lebih sadar akan manfaat produk herbal.</p>
